@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/navigation_home" >
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.main.NavHomeFragment">
+        <action
+            android:id="@+id/home_screen_fragment_to_device_details_fragment"
+            app:destination="@id/device_details_fragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/navigation_alert"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.main.NavAlertsFragment"
+        tools:layout="@layout/fragment_alerts">
+        <action
+            android:id="@+id/alerts_to_details_alerts_fragment"
+            app:destination="@id/navigation_alert_details"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_alert_details"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.main.NavAlertsDetailsFragment"
+        tools:layout="@layout/fragment_nav_alerts_details">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.main.NavSettingsFragment"
+        tools:layout="@layout/fragment_settings">
+    </fragment>
+
+    <fragment
+        android:id="@+id/device_details_fragment"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.main.DeviceDetailsFragment">
+        <action
+            android:id="@+id/device_details_fragment_to_home_screen_fragment"
+            app:destination="@id/navigation_home"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/device_details_fragment_to_locker_settings_fragment"
+            app:destination="@id/locker_settings"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/device_details_fragment_to_network_settings_fragment"
+            app:destination="@id/network_settings"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/keyboard_dialog_to_spl_plus_fragment"
+            app:destination="@id/spl_plus_lockers"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/device_details_fragment_to_manage_peripherals_fragment"
+            app:destination="@id/manage_peripherals"
+            app:enterAnim="@anim/enter_from_right_peripherals"
+            app:exitAnim="@anim/exit_to_left_peripherals"
+            app:popEnterAnim="@anim/enter_from_left_peripherals"
+            app:popExitAnim="@anim/exit_to_right_peripherals" />
+        <action
+            android:id="@+id/device_details_fragment_to_spl_plus_fragment"
+            app:destination="@id/spl_plus_lockers"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+
+        <action
+            android:id="@+id/device_details_fragment_to_manage_peripherals_linux_fragment"
+            app:destination="@id/manage_peripherals_linux"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/device_details_fragment_to_manage_users_fragment"
+            app:destination="@id/manage_users"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/device_details_fragment_to_google_maps_lat_long_fragment"
+            app:destination="@id/google_map_lat_long"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/locker_settings"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.main.LockerSettingsFragment"
+        tools:layout="@layout/fragment_locker_settings">
+        <action
+            android:id="@+id/locker_settings_to_google_maps_fragment"
+            app:destination="@id/google_map_lat_long"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/locker_settings_to_home_screen_fragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@+id/navigation_home"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/network_settings"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.main.NetworkSettingsFragment"
+        tools:layout="@layout/fragment_network_settings" />
+
+    <fragment
+        android:id="@+id/manage_peripherals_linux"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.main.ManagePeripheralsLinuxFragment"
+        tools:layout="@layout/fragment_manage_peripherals">
+        <action
+            android:id="@+id/manage_peripherals_to_peripherals_action_fragment"
+            app:destination="@id/peripherals_linux_action"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/peripherals_linux_action"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.main.LinuxActionsFragment"
+        tools:layout="@layout/fragment_manage_peripherals">
+    </fragment>
+
+    <fragment
+        android:id="@+id/manage_peripherals"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.main.ManagePeripheralsFragment"
+        tools:layout="@layout/fragment_manage_peripherals">
+        <action
+            android:id="@+id/manage_peripherals_to_p16_lockers_fragment"
+            app:destination="@id/p16_lockers"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/p16_lockers"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.main.PeripheralsP16Fragment"
+        tools:layout="@layout/fragment_peripherals_p16">
+        <action
+            android:id="@+id/p16_lockers_fragment_to_manage_peripherals_fragment"
+            app:destination="@id/manage_peripherals"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:popUpTo="@+id/manage_peripherals"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/spl_plus_lockers"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.main.SplPlusFragment"
+        tools:layout="@layout/fragment_spl_plus" />
+
+    <fragment
+        android:id="@+id/manage_users"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.main.ManageUsersFragment"
+        tools:layout="@layout/fragmet_manage_users" />
+
+    <fragment
+        android:id="@+id/google_map_lat_long"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.main.GoogleMapsLatLongFragment"
+        tools:layout="@layout/fragment_google_maps">
+        <action
+            android:id="@+id/google_map_lat_long_fragment_to_device_details_fragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:destination="@id/device_details_fragment"
+            app:popUpTo="@+id/device_details_fragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/google_map_lat_long_fragment_to_locker_settings_fragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:destination="@id/locker_settings"
+            app:popUpTo="@+id/locker_settings"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/manageUserDetails"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.main.ManageUserDetailsFragment"
+        android:label="fragment_manage_user_details"
+        tools:layout="@layout/fragment_manage_user_details" >
+        <action
+            android:id="@+id/action_manageUserDetails_to_manage_users"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:destination="@id/manage_users"
+            app:popUpTo="@+id/manage_users"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/thmDialogBackgroundColor"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+
+    <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+        android:id="@+id/tvChooseSplDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:textSize="18sp"
+        android:text="@string/spl_plus_keypad_type"
+        android:textColor="?attr/thmLockerSettingsDialogTextColor"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeRegular"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChooseSplDialog" >
+
+        <hr.sil.android.smartlockers.adminapp.fonts.RadioButtonWithFont
+            android:id="@+id/spl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nav_home_spl_title"
+            android:textColor="?attr/thmDialogTextColor"
+            android:textAllCaps="true"
+
+            android:textSize="?attr/thmRadioButtonAndCheckBoxTextSize"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular" />
+
+        <hr.sil.android.smartlockers.adminapp.fonts.RadioButtonWithFont
+            android:id="@+id/splPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spl_plus_title"
+            android:textColor="?attr/thmDialogTextColor"
+
+            android:textSize="?attr/thmRadioButtonAndCheckBoxTextSize"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular" />
+    </RadioGroup>
+
+    <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="?attr/thmButtonTextSizeInsideDialog"
+        android:textColor="?attr/thmLoginButtonTextColor"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeMedium"
+        android:background="?attr/thmMainButtonBackgroundColor"
+        android:text="@string/app_generic_cancel"
+        app:layout_constraintEnd_toStartOf="@id/btnConfirm"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+        android:id="@+id/btnConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="?attr/thmButtonTextSizeInsideDialog"
+        android:textColor="?attr/thmLoginButtonTextColor"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeMedium"
+        android:background="?attr/thmMainButtonBackgroundColor"
+        android:text="@string/app_generic_confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/btnCancel"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConfirm" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

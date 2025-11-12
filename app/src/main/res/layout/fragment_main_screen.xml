@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <hr.sil.android.smartlockers.adminapp.fonts.EdittextWithFont
+            android:id="@+id/filterEdittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="?attr/thmLoggedInBottomLineEditTextColor"
+            android:inputType="text"
+            android:letterSpacing="?attr/thmEdittextTextLetterSpacing"
+            android:maxLines="1"
+            android:paddingLeft="?attr/thmEdittextLeftPadding"
+            android:paddingRight="40dp"
+
+            android:hint="@string/generic_search"
+
+            android:textColor="?attr/thmRegisterEdittextColor"
+            android:textColorHint="?attr/thmHomeScreenEdittextFilterHintColor"
+            android:textSize="?attr/thmEdittextTextSize"
+
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivRemoveFilterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="?attr/thmEdittextMarginRight"
+            android:paddingBottom="?attr/thmHomeScreenEdittextPaddingBottomImage"
+
+            android:src="?attr/thmHomeScreenEdittextSearchImage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/devicesRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clTopLayout" />
+
+
+    <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+        android:id="@+id/noDevicesFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="?attr/thmListTitleTextSize"
+        android:textColor="?attr/thmDescriptionTextColor"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeRegular"
+        android:text="@string/main_no_parcel_lockers"
+        android:padding="20dp"
+        android:gravity="center"
+        android:visibility="invisible"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

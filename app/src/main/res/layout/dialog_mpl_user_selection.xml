@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/thmAssingUserBackgroundColor"
+    android:orientation="vertical">
+
+    <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+        android:id="@+id/tvAssingUserSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:text="@string/assing_mpl_section"
+        android:textColor="?attr/thmAssingUserTitleTextColor"
+        android:background="?attr/thmAssingUserTitleAndBottomBackgroundColor"
+        android:textSize="18sp"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeMedium" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/userSelectionRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:layout_alignParentTop="true"/>
+
+            <RelativeLayout
+                android:id="@+id/clUserDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userSelectionRecyclerView"
+                android:background="?attr/thmAssingUserTitleAndBottomBackgroundColor"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp" >
+
+
+                <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+                    android:id="@+id/btnCancel"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/thmMainButtonBackgroundColor"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="?attr/thmButtonTextSizeInsideDialog"
+                    android:text="@string/app_generic_cancel"
+                    android:textColor="?attr/thmLoginButtonTextColor"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeMedium"
+                    app:layout_constraintEnd_toStartOf="@id/btnConfirm"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"/>
+
+                <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+                    android:id="@+id/btnConfirm"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/thmMainButtonBackgroundColor"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="?attr/thmButtonTextSizeInsideDialog"
+                    android:text="@string/app_generic_confirm"
+                    android:textColor="?attr/thmLoginButtonTextColor"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeMedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@id/btnCancel"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

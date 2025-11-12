@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="?attr/thmSlaveLockerBackgroundColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clStatusImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/clUserDetails"
+        app:layout_constraintEnd_toStartOf="@+id/clUserDetails"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="2.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:id="@+id/ivStatusImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="10dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/ivNewImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="3dp"
+        android:src="?attr/thmManageUserNewUser"
+        app:layout_constraintEnd_toStartOf="@+id/clUserDetails"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clUserDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+
+        app:layout_constraintEnd_toStartOf="@+id/clUserAddDelete"
+        app:layout_constraintHorizontal_weight="6.0"
+        app:layout_constraintStart_toEndOf="@+id/clStatusImage"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/tvUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="?attr/thmListTitleTextSize"
+            android:textColor="?attr/thmDescriptionTextColor"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/tvUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="?attr/thmListDescriptionTextSize"
+            android:textColor="?attr/thmDescriptionTextColor"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserName"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clUserAddDelete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/clUserDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="2.0"
+        app:layout_constraintStart_toEndOf="@+id/clUserDetails"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivUserAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="10dp"
+
+            android:background="?attr/thmSlaveBackgroundColor"
+            android:src="?attr/thmSlaveAddButtonImage"  />
+
+        <ImageView
+            android:id="@+id/ivUserDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+
+            android:background="?attr/thmSlaveBackgroundColor"
+            android:src="?attr/thmSlaveDeleteButtonImage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/viewSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:background="?attr/thmRegisterViewSeparatorBackgroundColor"
+        app:layout_constraintTop_toBottomOf="@+id/clUserDetails" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/clStatusImage"
+        app:layout_constraintTop_toBottomOf="@+id/viewSeparator"
+        android:paddingRight="20dp" >
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/tvUserPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingRight="20dp"
+            android:textSize="?attr/thmListDescriptionTextSize"
+            android:textColor="?attr/thmDescriptionTextColor"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvUserGroupName"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/tvUserGroupName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingRight="20dp"
+            android:textSize="?attr/thmListDescriptionTextSize"
+            android:textColor="?attr/thmDescriptionTextColor"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserPhone"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/thmMainScreeBackgroundDrawable"
+    tools:context=".view.activity.MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarMain"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            android:background="?attr/thmMainToolbarBackgroundColor"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            android:gravity="center_horizontal"
+
+            android:paddingRight="?android:attr/actionBarSize"
+            android:paddingLeft="?android:attr/actionBarSize"
+
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/ivToolbarLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:src="?attr/thmToolbarHeader"
+
+                android:visibility="invisible"         />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text=""
+            android:layout_marginLeft="?android:attr/actionBarSize"
+            android:layout_marginRight="?android:attr/actionBarSize"
+            android:letterSpacing="0.03"
+            android:textColor="?attr/thmToolbarTextColor"
+            android:textSize="?attr/thmToolbarTextSize"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginRight="5dp"
+
+            android:gravity="center"
+            android:src="@drawable/ic_logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/toolbar_title"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:visibility="invisible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/viewSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/thmMainToolbarViewSeparatorColor"
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomMenu"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSeparator">
+
+        <fragment
+            android:id="@+id/navigation_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@+id/bottomMenu"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:navGraph="@navigation/nav_graph_main" />
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/thmBottomMenuBackgroundColor"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:itemIconTint="?attr/thmBottomMenuImageColor"
+        app:menu="@menu/bottom_navigation" />
+
+<!--    app:itemIconTint="@drawable/bottom_navigation_selector"-->
+
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:indeterminateDrawable="?attr/thmSplashProgressBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <FrameLayout
+        android:id="@+id/no_internet_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="?attr/thmNoInternet"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:text="@string/app_generic_no_network"
+            android:textColor="?attr/thmNoBleNoInternetLayoutTextColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/no_ble_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="?attr/thmNoBluebtooth"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:text="@string/app_generic_no_ble"
+            android:textColor="?attr/thmNoBleNoInternetLayoutTextColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/no_location_gps_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="?attr/thmNoLocationBackgroundColor"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivNoLocationImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="?attr/thmNoLocationGPSImage" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="@string/no_location_services"
+                android:textColor="?attr/thmDescriptionTextColor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeMedium"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivNoLocationImage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

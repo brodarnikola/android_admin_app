@@ -1,0 +1,64 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    namespace 'hr.sil.android.smartlockers.adminapp.core'
+    compileSdkVersion 33
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        demo {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions { 
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    testImplementation 'junit:junit:4.12'
+    /*androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'*/
+
+    //kotlin stdlib
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.22"
+    //coroutines
+    //api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version"
+    //api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines_version"
+    //retrofit2 coroutine extensions
+    api 'ru.gildor.coroutines:kotlin-coroutines-retrofit:1.1.0'
+
+
+    //SIL libraries
+    // api('hr.sil.android.ble.scanner:scan_multi:2.2.10')// { changing = true }
+    api('hr.sil.android.ble.scanner:scan_multi:2.6.2')
+    api('hr.sil.android.blecommunicator:android_blecommunicator:2.8.0')// { changing = true }
+    api('hr.sil.android.rest:core:1.2.30')// { changing = true }
+    api('hr.sil.android:util:1.1.0')// { changing = true }
+
+    //logging
+    api "org.slf4j:slf4j-api:1.7.36"
+    api "org.slf4j:slf4j-android:1.7.36"
+
+}
+

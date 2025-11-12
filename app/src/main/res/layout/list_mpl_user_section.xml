@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageButton
+            android:id="@+id/mpl_button_section_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:background="?attr/thmAssingUserCircleUnselected" />
+
+        <RelativeLayout
+            android:id="@+id/rlMPL_1"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/mpl_button_section_1"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:background="?attr/thmAssingUserRectangleSelected"
+            android:paddingLeft="4dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp">
+
+            <TextView
+                android:id="@+id/tvMPL_name_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/colorBlack"
+                android:textSize="?attr/thmListDescriptionTextSize"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+
+            <TextView
+                android:id="@+id/tvMPL_email_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvMPL_name_1"
+                android:text=""
+                android:textColor="@color/colorBlack"
+                android:textSize="?attr/thmListDescriptionTextSize"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMPL_2"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/rlMPL_1"
+            android:layout_weight="0.5"
+            android:background="?attr/thmAssingUserRectangleSelected"
+            android:gravity="center"
+            android:paddingRight="4dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp">
+
+            <TextView
+                android:id="@+id/tvMPL_name_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/colorBlack"
+                android:textSize="?attr/thmListDescriptionTextSize"
+                android:ellipsize="end"
+                android:maxLines="1"/>
+
+
+            <TextView
+                android:id="@+id/tvMPL_email_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvMPL_name_2"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/colorBlack"
+                android:textSize="?attr/thmListDescriptionTextSize"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+        </RelativeLayout>
+
+
+        <ImageButton
+            android:id="@+id/mpl_button_section_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@+id/rlMPL_2"
+            android:background="?attr/thmAssingUserCircleUnselected"  />
+
+    </LinearLayout>
+
+
+</LinearLayout>

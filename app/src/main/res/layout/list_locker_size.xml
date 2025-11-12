@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"  >
+
+    <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+        android:id="@+id/item_netowrk_config_name"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+
+        android:letterSpacing="?attr/thmEdittextTextLetterSpacing"
+        android:textSize="?attr/thmEdittextTextSize"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+
+        android:textColor="?attr/thmSlaveLinuxDropdownLockerSizeBC"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeRegular"
+        app:layout_constraintTop_toBottomOf="@id/llLanguages" />
+
+</LinearLayout>

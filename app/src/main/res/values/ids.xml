@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="layout_login" type="id" />
+    <item name="login_logo" type="id" />
+    <item name="login_progress" type="id" />
+    <item name="login_edit_username" type="id" />
+    <item name="login_edit_password" type="id" />
+    <item name="login_btn_login" type="id" />
+
+    <item name="layout_main" type="id" />
+    <item name="main_frame" type="id" />
+
+    <item name="layout_device_list" type="id" />
+    <item name="device_list_header" type="id" />
+    <item name="device_list_header_icon" type="id" />
+    <item name="device_list_header_text" type="id" />
+    <item name="device_list_wrap_filter" type="id" />
+    <item name="device_list_edit_filter" type="id" />
+    <item name="device_list_btn_clear_filter" type="id" />
+    <item name="device_list_component" type="id" />
+
+    <item name="layout_settings" type="id" />
+    <item name="settings_title" type="id" />
+    <item name="settings_chk_show_unknown_devices" type="id" />
+    <item name="settings_btn_refresh_adv_definitions" type="id" />
+    <item name="settings_btn_logout" type="id" />
+
+    <item name="layout_details" type="id" />
+    <item name="details_header" type="id" />
+    <item name="details_device" type="id" />
+    <item name="details_actions" type="id" />
+    <item name="details_action_commander" type="id" />
+    <item name="details_action_telemetry" type="id" />
+    <item name="details_action_scripter" type="id" />
+    <item name="details_action_firmware" type="id" />
+    <item name="details_action_info" type="id" />
+    <item name="details_action_configure" type="id" />
+
+    <item name="layout_action_configure" type="id" />
+    <item name="action_configure_title" type="id" />
+    <item name="action_configure_type_header" type="id" />
+    <item name="action_configure_device_name" type="id" />
+    <item name="action_configure_btn_deregister_device" type="id" />
+    <item name="action_configure_btn_edit_configuration" type="id" />
+    <item name="action_configure_btn_write_configuration" type="id" />
+
+    <item name="comp_button_text" type="id" />
+    <item name="comp_button_icon" type="id" />
+</resources>

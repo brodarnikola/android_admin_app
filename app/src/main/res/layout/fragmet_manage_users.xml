@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+        android:id="@+id/noUserFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/manage_users_no_users"
+        android:textColor="?attr/thmDescriptionTextColor"
+        android:textSize="21sp"
+        android:visibility="invisible"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeRegular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:alpha="0.4">
+
+        <hr.sil.android.smartlockers.adminapp.fonts.EdittextWithFont
+            android:id="@+id/filterEdittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="?attr/thmLoggedInAvailableBottomLineEditTextColor"
+            android:inputType="text"
+            android:letterSpacing="?attr/thmEdittextTextLetterSpacing"
+            android:maxLines="1"
+            android:paddingLeft="?attr/thmEdittextLeftPadding"
+            android:paddingRight="40dp"
+
+            android:hint="@string/generic_search"
+
+            android:textColor="?attr/thmRegisterEdittextColor"
+            android:textColorHint="?attr/thmHomeScreenEdittextFilterHintColor"
+            android:textSize="?attr/thmEdittextTextSize"
+
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivRemoveFilterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="?attr/thmEdittextMarginRight"
+            android:paddingBottom="?attr/thmHomeScreenEdittextPaddingBottomImage"
+
+            android:src="?attr/thmHomeScreenEdittextSearchImage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/usersRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clTopLayout"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:indeterminateDrawable="?attr/thmSplashProgressBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <bool name="test_show_animation">true</bool>
+    <integer name="number_of_rows_in_epaper">7</integer>
+
+    <bool name="scan_all_devices_mpl_spl_plus_tablet">true</bool>
+    <bool name="scan_only_tablet">false</bool>
+    <bool name="scan_only_mpl">false</bool>
+
+</resources>

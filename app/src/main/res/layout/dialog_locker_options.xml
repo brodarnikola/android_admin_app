@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/thmLockerOptionDialogBC"
+    android:orientation="vertical"
+    android:paddingBottom="10dp" >
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivArrowBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvTitle"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="1.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/thmLockerOptionArrowBackImage" />
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:ellipsize="end"
+            android:gravity="left"
+
+            android:maxLines="1"
+            android:text="AAAAAA"
+            android:textColor="?attr/thmLockerSettingsDialogTextColor"
+            android:textSize="?attr/thmLockerOptionTitleTextSize"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeBold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="8.5"
+            app:layout_constraintStart_toEndOf="@+id/ivArrowBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlLockerOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+   <!-- <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical">
+
+
+            <View
+                android:id="@+id/distincerDiscover"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@color/colorBlack20Percent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clTopLayout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clDiscover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/distincerDiscover">
+
+                <ImageView
+                    android:id="@+id/ivDiscover"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="5dp"
+
+                    app:layout_constraintEnd_toStartOf="@+id/tvDiscover"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintHorizontal_weight="2.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="?attr/thmLockerOptionDiscoverImage" />
+
+                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                    android:id="@+id/tvDiscover"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+
+                    android:maxLines="3"
+
+                    android:text="Turn on the locker’s LED for couple of seconds so it is easier to locate the current locker."
+                    android:textColor="?attr/thmLockerSettingsDialogTextColor"
+                    android:textSize="15sp"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeMedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="7.5"
+                    app:layout_constraintStart_toEndOf="@+id/ivDiscover"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clButtonDiscover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clDiscover">
+
+                <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+                    android:id="@+id/btnDiscover"
+                    android:layout_width="190dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/thmLockerOptionButtonBC"
+                    android:ellipsize="end"
+
+
+                    android:letterSpacing="?attr/thmButtonLetterSpacing"
+
+                    android:maxLines="1"
+
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+
+                    android:text="@string/peripheral_settings_discover_peripheral"
+                    android:textColor="?attr/thmLoginButtonTextColor"
+                    android:textSize="?attr/thmButtonTextSize"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeMedium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progressDiscover"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:indeterminateDrawable="?attr/thmSplashProgressBar"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/distincerForceOpen"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginTop="10dp"
+                android:background="?attr/thmLockerOptionDistincerBC"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/clButtonDiscover" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clForceOpen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/distincerForceOpen">
+
+                <ImageView
+                    android:id="@+id/ivForceOpen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintEnd_toStartOf="@+id/tvForceOpen"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintHorizontal_weight="2.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="?attr/thmLockerOptionForceOpenImage" />
+
+                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                    android:id="@+id/tvForceOpen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+
+                    android:maxLines="3"
+
+                    android:text="Open the peripheral door even if
+the locker is occupied. Use only in exceptional situations."
+                    android:textColor="?attr/thmLockerSettingsDialogTextColor"
+                    android:textSize="15sp"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeMedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="7.5"
+                    app:layout_constraintStart_toEndOf="@+id/ivForceOpen"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clButtonForceOpen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clForceOpen">
+
+                <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+                    android:id="@+id/btnForceOpen"
+                    android:layout_width="190dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/thmLockerOptionButtonBC"
+                    android:ellipsize="end"
+
+
+                    android:letterSpacing="?attr/thmButtonLetterSpacing"
+
+                    android:maxLines="1"
+
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+
+                    android:text="@string/peripheral_settings_force_open"
+                    android:textColor="?attr/thmLoginButtonTextColor"
+                    android:textSize="?attr/thmButtonTextSize"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeMedium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progressForceOpen"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:indeterminateDrawable="?attr/thmSplashProgressBar"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/distincerInvalidateKey"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginTop="10dp"
+                android:background="?attr/thmLockerOptionDistincerBC"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/clButtonForceOpen" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clInvalidateKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/distincerInvalidateKey">
+
+                <ImageView
+                    android:id="@+id/ivInvalidateKey"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintEnd_toStartOf="@+id/tvInvalidateKey"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintHorizontal_weight="2.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="?attr/thmLockerOptionDeleteKeyImage" />
+
+                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                    android:id="@+id/tvInvalidateKey"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+
+                    android:maxLines="3"
+
+                    android:text="Permanently invalidate a delivery or pick at home key for this peripheral."
+                    android:textColor="?attr/thmLockerSettingsDialogTextColor"
+                    android:textSize="15sp"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeMedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="7.5"
+                    app:layout_constraintStart_toEndOf="@+id/ivInvalidateKey"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clButtonInvalidateKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clInvalidateKey">
+
+                <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+                    android:id="@+id/btnInvalidateKey"
+                    android:layout_width="190dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/thmLockerOptionButtonBC"
+                    android:ellipsize="end"
+
+                    android:letterSpacing="?attr/thmButtonLetterSpacing"
+
+                    android:maxLines="1"
+
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+
+                    android:text="@string/peripheral_settings_discover_peripheral"
+                    android:textColor="?attr/thmLoginButtonTextColor"
+                    android:textSize="?attr/thmButtonTextSize"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeMedium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progressInvalidateKey"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:indeterminateDrawable="?attr/thmSplashProgressBar"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/distincerRemoveLocker"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginTop="10dp"
+                android:background="?attr/thmLockerOptionDistincerBC"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/clButtonInvalidateKey" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clRemoveLocker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/distincerRemoveLocker">
+
+                <ImageView
+                    android:id="@+id/ivRemoveLocker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintEnd_toStartOf="@+id/tvRemoveLocker"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintHorizontal_weight="2.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="?attr/thmLockerOptionRemoveLockerImage" />
+
+                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                    android:id="@+id/tvRemoveLocker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+
+                    android:text="Unregister current locker. All active keys will be invalidated.
+It may take a few hours to process removal request."
+                    android:textColor="?attr/thmLockerSettingsDialogTextColor"
+                    android:textSize="15sp"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeMedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="7.5"
+                    app:layout_constraintStart_toEndOf="@+id/ivRemoveLocker"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/clButtonRemoveLocker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clRemoveLocker"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+                    android:id="@+id/btnRemoveLocker"
+                    android:layout_width="190dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/thmLockerOptionButtonBC"
+                    android:ellipsize="end"
+
+                    android:letterSpacing="?attr/thmButtonLetterSpacing"
+
+                    android:maxLines="1"
+
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+
+                    android:text="@string/peripheral_settings_discover_peripheral"
+                    android:textColor="?attr/thmLoginButtonTextColor"
+                    android:textSize="?attr/thmButtonTextSize"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeMedium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progressRemoveLocker"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:indeterminateDrawable="?attr/thmSplashProgressBar"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </RelativeLayout>
+
+
+            &lt;!&ndash; <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"  >
+
+                <ImageView
+                    android:id="@+id/ivRemoveLocker1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintEnd_toStartOf="@+id/tvRemoveLocker1"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintHorizontal_weight="2.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                    android:id="@+id/tvRemoveLocker1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+
+                    android:text="a"
+                    android:textColor="?attr/thmLockerSettingsDialogTextColor"
+                    android:textSize="15sp"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeMedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clRemoveLocker1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clButtonRemoveLocker"
+
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+
+                android:layout_marginTop="10dp" >
+
+                <ImageView
+                    android:id="@+id/ivRemoveLocker1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintEnd_toStartOf="@+id/tvRemoveLocker1"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintHorizontal_weight="2.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="?attr/thmLockerOptionRemoveLockerImage"/>
+
+                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                    android:id="@+id/tvRemoveLocker1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+
+                    android:text="Unregister current locker. All active keys will be invalidated.
+It may take a few hours to process removal request."
+                    android:textColor="?attr/thmLockerSettingsDialogTextColor"
+                    android:textSize="15sp"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeMedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="7.5"
+                    app:layout_constraintStart_toEndOf="@+id/ivRemoveLocker1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRemoveLocker2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clButtonRemoveLocker"
+
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+
+        android:layout_marginTop="10dp" >
+
+        <ImageView
+            android:id="@+id/ivRemoveLocker2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintEnd_toStartOf="@+id/tvRemoveLocker1"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/thmLockerOptionRemoveLockerImage"/>
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/tvRemoveLocker2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+
+            android:text="Unregister current locker. All active keys will be invalidated.
+It may take a few hours to process removal request."
+            android:textColor="?attr/thmLockerSettingsDialogTextColor"
+            android:textSize="15sp"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="7.5"
+            app:layout_constraintStart_toEndOf="@+id/ivRemoveLocker2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout> &ndash;&gt;
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+-->
+
+</LinearLayout>

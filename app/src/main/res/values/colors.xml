@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- COMMON COLORS -->
+    <color name="colorWhite">#ffffff</color>
+    <color name="transparentColor">#00ffffff</color>
+    <color name="colorBlack">#000000</color>
+
+</resources>

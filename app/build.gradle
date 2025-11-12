@@ -1,0 +1,377 @@
+//apply plugin: 'com.android.application'
+//apply plugin: 'kotlin-android'
+// apply plugin: 'kotlin-android-extensions'
+// apply plugin: 'com.google.firebase.appdistribution'
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+//    id 'kotlin-kapt'
+//    id 'kotlin-parcelize'
+    id 'kotlin-android'
+    id 'com.google.devtools.ksp'
+    id 'com.google.gms.google-services'
+
+    //id 'com.google.dagger.hilt.android'
+}
+
+def versionMajor = 4
+def versionMinor = 7
+def versionPatch = 0
+
+def rcVariantNum = 0
+//RC variant name suffix - DO NOT MODIFY!
+def rcVariantVersionSuffix = (rcVariantNum == 0 ? "" : "-rc${rcVariantNum}")
+
+ext.flexi_debug_api_base_url = 'https://huberapi.swissinnolab.com/'
+ext.zwick_debug_api_base_url = 'https://huberapi.swissinnolab.com/'
+ext.huber_debug_api_base_url = 'https://prod-huberapi.swissinnolab.com/' //'https://hubertestapi.swissinnolab.com/'
+ext.cpl_debug_api_base_url = 'https://huberapi.swissinnolab.com/'
+ext.flexilockercpl_debug_api_base_url = 'https://huberapi.swissinnolab.com/'
+ext.retail_debug_api_base_url = 'https://huberapi.swissinnolab.com/'
+ext.flexi_demo_api_base_url = 'https://hubertestapi.swissinnolab.com/'
+ext.zwick_demo_api_base_url = 'https://zwickdemoapi.swissinnolab.com/'
+ext.huber_demo_api_base_url = 'https://hubertestapi.swissinnolab.com/'
+ext.cpl_demo_api_base_url = 'https://huberapi.swissinnolab.com/'
+ext.flexilockercpl_demo_api_base_url = 'https://hubertestapi.swissinnolab.com/'
+ext.retail_demo_api_base_url = 'https://huberapi.swissinnolab.com/'
+ext.flexi_release_api_base_url = 'https://prod-api.flexilockers.com/'
+ext.zwick_release_api_base_url = 'https://zwickapi.swissinnolab.com/'
+ext.huber_release_api_base_url = 'https://prod-huberapi.swissinnolab.com/'
+ext.cpl_release_api_base_url = 'https://cplprodapi.swissinnolab.com/'
+ext.flexilockercpl_release_api_base_url = 'https://flexicplapi.swissinnolab.com/'
+ext.retail_release_api_base_url = 'https://retaillockerapi.swissinnolab.com/'
+
+
+ext.flexi_debug_api_context = 'huber/'
+ext.zwick_debug_api_context = 'huber/'
+ext.huber_debug_api_context = 'huber/'
+ext.cpl_debug_api_context = 'huber/'
+ext.flexilockercpl_debug_api_context = 'huber/'
+ext.retail_debug_api_context = 'huber/'
+ext.flexi_demo_api_context = 'huber/'
+ext.zwick_demo_api_context = 'huber/'
+ext.huber_demo_api_context = 'huber/'
+ext.cpl_demo_api_context = 'huber/'
+ext.flexilockercpl_demo_api_context = 'huber/'
+ext.retail_demo_api_context = 'huber/'
+ext.flexi_release_api_context = 'huber/'
+ext.zwick_release_api_context = 'huber/'
+ext.huber_release_api_context = 'huber/'
+ext.cpl_release_api_context = 'huber/'
+ext.flexilockercpl_release_api_context = 'huber/'
+ext.retail_release_api_context = 'huber/'
+
+android {
+    namespace 'hr.sil.android.smartlockers.adminapp'
+    signingConfigs {
+        config {
+            keyAlias 'mpl'
+            keyPassword 'Nikkiheat1'
+            // before was like this  storeFile file('../../../keystores/zwickAdminApp.jks')
+            storeFile file('../../../workspace/keystores/schlaueAdmin.jks')
+            storePassword 'Nikkiheat1'
+        }
+    }
+    compileSdkVersion 35
+    defaultConfig {
+        applicationId "hr.sil.android.smartlockers.adminapp"
+        minSdkVersion 26
+        targetSdkVersion 35
+
+        vectorDrawables {
+            useSupportLibrary true
+        }
+
+        versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+        versionName "$versionMajor.$versionMinor.$versionPatch"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    flavorDimensions "branding"
+    productFlavors {
+        zwick {
+            dimension "branding"
+            applicationId "hr.sil.android.zwickappboxadmin"
+            manifestPlaceholders = [appTheme: "ZwickTheme", themeExt: "zwick"]
+            buildConfigField('String', 'APP_BASE_EMAIL', '"support@zwick.it"')
+        }
+        flexi {
+            dimension "branding"
+            applicationId "hr.sil.android.flexilockeradminapp"
+            manifestPlaceholders = [appTheme: "FlexiTheme", themeExt: "flexi"]
+            buildConfigField('String', 'APP_BASE_EMAIL', '"support@flexilocker.com"')
+        }
+        huber {
+            dimension "branding"
+            applicationId "hr.sil.android.schlaueboxadmin"
+            manifestPlaceholders = [appTheme: "SchlaueBoxTheme", themeExt: "huber"]
+            buildConfigField 'String', 'APP_BASE_EMAIL', '"info@schlauebox.ch"'
+        }
+        cpl {
+            dimension "branding"
+            applicationId "hr.sil.android.cpladmin"
+            manifestPlaceholders = [appTheme: "CPLTheme", themeExt: "baselcpl"]
+            buildConfigField('String', 'APP_BASE_EMAIL', '"support@smartlockertec.com"')
+        }
+        retail {
+            dimension "branding"
+            applicationId "hr.sil.android.retailadmin"
+            manifestPlaceholders = [appTheme: "RETAILTheme", themeExt: "retail"]
+            buildConfigField('String', 'APP_BASE_EMAIL', '"support@smartlockertec.com"')
+        }
+        flexilockercpl {
+            dimension "branding"
+            applicationId "hr.sil.android.cplflexilockeradmin"
+            manifestPlaceholders = [appTheme: "FlexilockerCPLTheme", themeExt: "flexilockercpl"]
+            buildConfigField('String', 'APP_BASE_EMAIL', '"support@smartlockertec.com"')
+        }
+    }
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+    buildTypes {
+        debug {
+
+            minifyEnabled false
+
+            //version resource
+            versionNameSuffix "${rcVariantVersionSuffix}.debug"
+            resValue "string", "app_version", "${defaultConfig.versionName}${versionNameSuffix}"
+//            firebaseAppDistribution {
+//                appId = "1:797901673369:android:2fe412eb63c2f5dd17f908"
+//                serviceCredentialsFile = "../../../keystores/schlaueboxadmin-3ea3c2f544e7.json"
+//                testers = "szuzul@gmail.com, stjepan@swissinnolab.com"
+//            }
+        }
+        demo {
+
+            versionNameSuffix "${rcVariantVersionSuffix}.demo"
+            //version resource
+            resValue "string", "app_version", "${defaultConfig.versionName}${versionNameSuffix}"
+
+            //configuration
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.config
+        }
+        release {
+
+            //version resource
+            resValue "string", "app_version", "${defaultConfig.versionName}"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+
+    sourceSets {
+        zwick {
+            java.srcDirs = ['src/zwick/java',]
+            res.srcDirs = ['src/zwick/res',]
+            assets.srcDirs = ['src/zwick/assets',]
+            manifest.srcFile 'src/zwick/AndroidManifest.xml'
+
+            // left here just for example, so that we don't search long time on google
+            //res.srcDirs = ['src/myappbox/res', 'src/sharedType/res']
+            //assets.srcDirs = ['src/myappbox/assets', 'src/sharedType/assets']
+            //manifest.srcFile 'src/myappbox/AndroidManifest.xml'
+        }
+        flexi {
+            java.srcDirs = ['src/flexi/java',]
+            res.srcDirs = ['src/flexi/res',]
+            assets.srcDirs = ['src/flexi/assets',]
+            manifest.srcFile 'src/flexi/AndroidManifest.xml'
+        }
+        huber {
+            java.srcDirs = ['src/huber/java',]
+            res.srcDirs = ['src/huber/res',]
+            assets.srcDirs = ['src/huber/assets',]
+            manifest.srcFile 'src/huber/AndroidManifest.xml'
+        }
+        cpl {
+            java.srcDirs = ['src/cpl/java',]
+            res.srcDirs = ['src/cpl/res',]
+            assets.srcDirs = ['src/cpl/assets',]
+            manifest.srcFile 'src/cpl/AndroidManifest.xml'
+        }
+        flexilockercpl {
+            java.srcDirs = ['src/flexilockercpl/java',]
+            res.srcDirs = ['src/flexilockercpl/res',]
+            assets.srcDirs = ['src/flexilockercpl/assets',]
+            manifest.srcFile 'src/flexilockercpl/AndroidManifest.xml'
+        }
+        retail {
+            java.srcDirs = ['src/retail/java',]
+            res.srcDirs = ['src/retail/res',]
+            assets.srcDirs = ['src/retail/assets',]
+            manifest.srcFile 'src/retail/AndroidManifest.xml'
+        }
+    }
+
+
+    project.android.applicationVariants.all { variant ->
+        def url = project.ext."${variant.flavorName}_${variant.buildType.name}_api_base_url"
+        def ctx = project.ext."${variant.flavorName}_${variant.buildType.name}_api_context"
+
+        variant.buildConfigField('String', 'API_BASE_URL', "\"${url}\"")
+        variant.buildConfigField('String', 'API_CONTEXT', "\"${ctx}\"")
+    }
+
+    packagingOptions {
+        exclude 'META-INF/app-compileReleaseKotlin.kotlin_module'
+        exclude 'META-INF/app_release.kotlin_module'
+        exclude 'META-INF/core_release.kotlin_module'
+        exclude 'META-INF/app_debug.kotlin_module'
+        exclude 'META-INF/main.kotlin_module'
+    }
+
+    buildFeatures {
+
+        compose true
+        viewBinding = true
+        buildConfig = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.8'
+    }
+    compileOptions {
+        //coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+//    compileOptions {
+////        sourceCompatibility JavaVersion.VERSION_11
+////        targetCompatibility JavaVersion.VERSION_11
+//        sourceCompatibility JavaVersion.VERSION_17
+//        targetCompatibility JavaVersion.VERSION_17
+//    }
+//
+//    buildFeatures {
+//        viewBinding = true
+//        buildConfig = true
+//    }
+//
+//    kotlinOptions {
+////        jvmTarget = JavaVersion.VERSION_1_8.toString()
+//        jvmTarget = "17"
+//    }
+}
+
+configurations.all {
+    // Check for updates every build
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.22"
+    /*implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0' */
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    // anko commons
+    //implementation "org.jetbrains.anko:anko-commons:$anko_version"
+
+    implementation project(":core")
+
+    //EventBus
+    implementation 'org.greenrobot:eventbus:3.3.1' // 'org.greenrobot:eventbus:3.1.1'
+
+    //SIL libraries
+    implementation('hr.sil.android.datacache:android_datacache:2.1.8')// { changing = true }
+    implementation('hr.sil.android:view_util:1.1.5')// { changing = true }
+
+    //debug
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+    //FCM notifications
+
+    implementation "com.google.firebase:firebase-core:21.1.1" // 'com.google.firebase:firebase-core:17.3.0'
+    implementation "com.google.firebase:firebase-messaging:25.0.1" // 'com.google.firebase:firebase-messaging:20.1.7'
+    //implementation "com.firebase:firebase-jobdispatcher:0.8.5" // 'com.firebase:firebase-jobdispatcher:0.8.5'
+
+    // AndroidX
+    implementation "androidx.recyclerview:recyclerview:1.3.0" // "androidx.recyclerview:recyclerview:1.1.0"
+    implementation "androidx.appcompat:appcompat:1.3.0-alpha02" // "androidx.appcompat:appcompat:1.1.0"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.5.3" // "androidx.navigation:navigation-fragment-ktx:2.3.0-alpha06"
+    implementation "androidx.navigation:navigation-ui-ktx:2.5.3" //"androidx.navigation:navigation-ui-ktx:2.3.0-alpha06"
+ 
+    implementation "com.google.android.gms:play-services-location:21.3.0" //  'com.google.android.gms:play-services-location:17.0.0'
+    //implementation  "com.google.android.gms:play-services-maps:18.1.0" // api 'com.google.android.gms:play-services-maps:17.0.0'
+    //implementation "com.google.android.gms:play-services-plus:17.0.0"
+
+    // new libraries
+
+
+
+    implementation 'androidx.appcompat:appcompat:1.7.1' // implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.9.0'  // implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1' // implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+
+
+    // jetpack compose library
+    implementation 'androidx.activity:activity-compose:1.9.3'
+    implementation platform('androidx.compose:compose-bom:2025.10.01')
+    implementation 'androidx.compose.ui:ui'
+    implementation 'androidx.compose.ui:ui-graphics'
+    implementation 'androidx.compose.ui:ui-tooling-preview'
+
+//    implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.compose.material3:material3-android:1.4.0'
+    implementation 'androidx.compose.material:material-icons-extended:1.7.8'
+
+
+    implementation 'androidx.constraintlayout:constraintlayout-compose:1.1.1'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
+    androidTestImplementation platform('androidx.compose:compose-bom:2025.10.01')
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+    debugImplementation 'androidx.compose.ui:ui-tooling'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest'
+
+    implementation 'io.coil-kt:coil-compose:2.7.0'
+
+    implementation 'androidx.compose.material:material:1.9.4'
+    implementation 'androidx.navigation:navigation-compose:2.9.5'
+
+    // appcompanist
+    implementation 'com.google.accompanist:accompanist-pager:0.25.0'
+    implementation 'com.google.accompanist:accompanist-systemuicontroller:0.29.1-alpha'
+    implementation 'com.google.accompanist:accompanist-flowlayout:0.29.1-alpha'
+    implementation 'com.google.accompanist:accompanist-permissions:0.29.1-alpha'
+    implementation 'com.google.accompanist:accompanist-navigation-animation:0.29.1-alpha'
+
+    // lifecycle
+
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.9.4'
+    implementation 'androidx.lifecycle:lifecycle-runtime-compose:2.9.4'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.9.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.9.4'
+
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.4'
+
+    // material3
+
+    implementation 'androidx.compose.material3:material3:1.4.0'
+    implementation 'androidx.compose.material3:material3-window-size-class:1.4.0'
+
+    //
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0'
+
+}
+
+//apply plugin: 'com.google.gms.google-services'

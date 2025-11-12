@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:background="?attr/thmSlaveLockerBackgroundColor"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivLockerSlaveImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/clLockerDetails"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/clLockerDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/clReducedMobilityCleaningImages"
+            app:layout_constraintHorizontal_weight="6.0"
+            app:layout_constraintStart_toEndOf="@+id/ivLockerSlaveImage"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvSlaveMacAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="?attr/thmDescriptionTextColor"
+                android:textSize="?attr/thmListSubTitleTextSize"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeMedium" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                    android:id="@+id/tvSlaveSize"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="?attr/thmDescriptionTextColor"
+                    android:textSize="?attr/thmListDescriptionTextSize"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeRegular"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvSlaveInProximity"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintHorizontal_weight="2.2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                    android:id="@+id/tvSlaveInProximity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="?attr/thmDescriptionTextColor"
+                    android:textSize="?attr/thmListDescriptionTextSize"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeRegular"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvSlaveStatus"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintHorizontal_weight="3.8"
+                    app:layout_constraintStart_toEndOf="@+id/tvSlaveSize"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                    android:id="@+id/tvSlaveStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="?attr/thmDescriptionTextColor"
+                    android:textSize="?attr/thmListDescriptionTextSize"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeRegular"
+                    android:paddingLeft="5dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintHorizontal_weight="4.0"
+                    app:layout_constraintStart_toEndOf="@+id/tvSlaveInProximity"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clReducedMobilityCleaningImages"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/rlSlaveAddDelete"
+            app:layout_constraintHorizontal_weight="0.7"
+            app:layout_constraintStart_toEndOf="@+id/clLockerDetails"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivCleaningImages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/ic_needs_cleaning"
+                android:visibility="gone"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivReducedMobility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/ic_reduced_mobility"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivCleaningImages" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rlSlaveAddDelete"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="1.3"
+            app:layout_constraintStart_toEndOf="@+id/clReducedMobilityCleaningImages"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivSlaveAddSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                android:src="?attr/thmSlaveAddImage" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:indeterminateDrawable="?attr/thmSplashProgressBar"
+                android:visibility="invisible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clKeyPurpose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/clTopLayout"
+        app:layout_constraintTop_toBottomOf="@+id/clTopLayout"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/tvKeyPurposeTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:ellipsize="end"
+            android:maxLines="1"
+
+            android:paddingLeft="8dp"
+            android:gravity="left|center_vertical"
+
+            android:text="@string/key_purpose"
+            android:textColor="?attr/thmDescriptionTextColor"
+            android:textSize="?attr/thmListDescriptionTextSize"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvKeyPurposeValue"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/tvKeyPurposeValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="?attr/thmDescriptionTextColor"
+            android:textSize="?attr/thmListDescriptionTextSize"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="7.4"
+            app:layout_constraintStart_toEndOf="@+id/tvKeyPurposeTitle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCreatedFor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/clKeyPurpose"
+        app:layout_constraintTop_toBottomOf="@+id/clKeyPurpose"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/tvKeyCreatedForTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:ellipsize="end"
+            android:maxLines="1"
+
+            android:paddingLeft="8dp"
+            android:gravity="left|center_vertical"
+
+            android:text="@string/key_created_for"
+            android:textColor="?attr/thmDescriptionTextColor"
+            android:textSize="?attr/thmListDescriptionTextSize"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvKeyCreatedForNameDate"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/tvKeyCreatedForNameDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="?attr/thmDescriptionTextColor"
+            android:textSize="?attr/thmListDescriptionTextSize"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="7.4"
+            app:layout_constraintStart_toEndOf="@+id/tvKeyCreatedForTitle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clDeletingKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/clCreatedFor"
+        app:layout_constraintTop_toBottomOf="@+id/clCreatedFor"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/tvDeletingKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:ellipsize="end"
+            android:maxLines="1"
+
+            android:gravity="left|center_vertical"
+
+            android:paddingLeft="4dp"
+            android:text="@string/deleting_key_in_progress"
+            android:textColor="?attr/thmDescriptionTextColor"
+            android:textSize="?attr/thmListDescriptionTextSize"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="3.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clDoorStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/clCreatedFor"
+        app:layout_constraintTop_toBottomOf="@+id/clDeletingKey"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/tvLockerDoor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:ellipsize="end"
+            android:maxLines="1"
+
+            android:gravity="left|center_vertical"
+
+            android:paddingLeft="4dp"
+            android:text="@string/locker_doors_are_opened"
+            android:textColor="?attr/thmLockerDoorOpenTextColor"
+            android:textSize="?attr/thmListDescriptionTextSize"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeBold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="3.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

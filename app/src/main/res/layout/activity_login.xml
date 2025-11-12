@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/thmMainScreeBackgroundDrawable"
+    tools:context="hr.sil.android.smartlockers.adminapp.view.activity.LoginActivity">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/thmMainToolbarBackgroundColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center_horizontal"
+        android:contentInsetLeft="0dp"
+        android:contentInsetStart="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetEnd="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+
+        android:paddingLeft="?android:attr/actionBarSize"
+        android:paddingRight="?android:attr/actionBarSize">
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/forgot_password_title"
+            android:textSize="?attr/thmToolbarTextSize"
+            android:textColor="?attr/thmToolbarTextColor"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="?attr/actionBarSize" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--
+<androidx.appcompat.widget.Toolbar
+android:id="@+id/toolbar"
+android:layout_width="wrap_content"
+android:layout_height="?attr/actionBarSize"
+android:background="?attr/thmToolbarBackgroundColor"
+app:layout_constraintLeft_toLeftOf="parent"
+app:layout_constraintRight_toRightOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:title="Kebab"
+app:titleTextColor="?attr/thmTitleTextColor"
+app:contentInsetEnd="2dp"
+app:contentInsetLeft="2dp"
+app:contentInsetRight="2dp"
+app:contentInsetStart="2dp" >
+-->
+
+
+<!--
+ <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/thmToolbarBackgroundColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:title="Kebab"
+        app:titleTextColor="?attr/thmTitleTextColor"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:paddingRight="15dp"
+        style="@style/ToolBarStyle.Event"
+        android:minHeight="@dimen/abc_action_bar_default_height_material">
+
+        <hr.sil.android.smartlockers.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Toolbar Title"
+            android:textColor="?attr/thmTitleTextColor"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular" />
+
+    </androidx.appcompat.widget.Toolbar>
+    -->

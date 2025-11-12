@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:background="?attr/thmDialogBackgroundColor"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTopLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/tvQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="?attr/thmDialogTextColor"
+            android:textSize="?attr/thmDialogDescriptionTextSize"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressGetAllKeys"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="?attr/thmMainButtonBackgroundColor"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/app_generic_cancel"
+        android:textColor="?attr/thmLoginButtonTextColor"
+        android:textSize="?attr/thmButtonTextSizeInsideDialog"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeMedium"
+        app:layout_constraintEnd_toStartOf="@id/btnConfirm"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clTopLayout" />
+
+    <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+        android:id="@+id/btnConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:alpha="0.4"
+        android:background="?attr/thmMainButtonBackgroundColor"
+        android:enabled="false"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/app_generic_confirm"
+        android:textColor="?attr/thmLoginButtonTextColor"
+        android:textSize="?attr/thmButtonTextSizeInsideDialog"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/btnCancel"
+        app:layout_constraintTop_toBottomOf="@+id/clTopLayout" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clTopLayout" />
+
+    <View
+        android:id="@+id/viewSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConfirm" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlUnsuccessfullyDeletedKeys"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSeparator"
+        android:visibility="gone"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

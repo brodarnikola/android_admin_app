@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/thmDialogBackgroundColor"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/delete_single_alerts_messages"
+        android:textColor="?attr/thmDialogTextColor"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeRegular"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/app_generic_cancel"
+        android:textColor="?attr/thmLoginButtonTextColor"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeMedium"
+        android:background="?attr/thmMainButtonBackgroundColor"
+        app:layout_constraintEnd_toStartOf="@id/btnConfirm"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestion" />
+
+    <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+        android:id="@+id/btnConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/app_generic_confirm"
+        android:textColor="?attr/thmLoginButtonTextColor"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeMedium"
+        android:background="?attr/thmMainButtonBackgroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/btnCancel"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestion"  />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestion"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConfirm" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp">
+
+    <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:textSize="17sp"
+        android:text="@string/main_locker_apn_list"
+        android:textColor="?attr/thmDescriptionTextColor"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeRegular"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/llApnNetwork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <Spinner
+            android:id="@+id/spinerapnNetworkSelection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/thmSpinnerBackgroundColor"
+            android:popupBackground="?attr/thmSpinnerPopupBackgroundColor"
+            android:gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+        android:id="@+id/btnSaveChanges"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:textSize="?attr/thmButtonTextSize"
+        android:letterSpacing="?attr/thmButtonLetterSpacing"
+        android:layout_marginBottom="30dp"
+        android:text="@string/locker_settings_save_changes"
+        android:textColor="?attr/thmLoginButtonTextColor"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeMedium"
+        android:background="?attr/thmMainButtonBackgroundColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#e93947</color>
+    <color name="colorDarkAccent">#b92732</color>
+    <color name="colorPrimaryTransparent">#4Dff8a00</color>
+
+    <color name="colorPrimaryDark">#1f2e3f</color>
+
+    <!--<color userName="colorAccent">#ff8a00</color>-->
+
+    <color name="colorGrayLight">#33333234</color>
+    <color name="colorDarkGray">#979797</color>
+
+    <color name="colorHoloBlueLight">#ff33b5e5</color>
+
+    <color name="colorDarkerBlack100Percent">#1b2433</color>
+    <color name="colorDarkerBlack50Percent">#801b2433</color>
+
+    <color name="colorOpacityWhite">#26ffffff</color>
+    <color name="colorPinkishGray">#c8c4c4</color>
+    <color name="colorSmallIntesityGray">#d8d8d8</color>
+    <color name="colorStrongerGray">#616161</color>
+    <color name="colorLightGray">#979797</color>
+
+    <color name="colorBlack20Percent">#80000000</color>
+
+    <color name="colorGoldenRod">#ecc117</color>
+
+
+    <color name="accessSharingItemBackgroundColor">#4a4a4a</color>
+    <color name="colorError">#FF4949</color>
+    <color name="colorWhite30PercentTransparency">#4cffffff</color>
+
+    <color name="colorGreen">#62bb47</color>
+    <color name="colorYellow">#e0ee09</color>
+    <color name="colorOrange">#fec228</color>
+
+    <color name="colorYellowDeleteDevice">#ffdf12</color>
+
+</resources>

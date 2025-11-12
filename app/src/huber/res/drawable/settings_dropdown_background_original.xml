@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="46dp" android:top="0dp" android:bottom="0dp">
+        <shape android:shape="rectangle" >
+            <corners android:topRightRadius="4dp" android:topLeftRadius="4dp"
+                android:bottomLeftRadius="4dp" android:bottomRightRadius="4dp"/>
+            <solid android:color="@color/colorDarkGray" />
+
+            <!--If we want to include padding
+              <padding
+                android:bottom="4dp"
+                android:left="4dp"
+                android:right="4dp"
+                android:top="4dp" />-->
+
+            <stroke android:width="1dp"  android:color="@color/colorPrimary"  />
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/ic_arrow_drop_down_black_24dp"
+        android:gravity="end" android:right="5dp" android:bottom="2dp" />
+</layer-list>

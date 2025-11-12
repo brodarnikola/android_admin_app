@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Schlauebox Admin"</string>
+    <string name="main_no_parcel_lockers">"You currently don’t have access to any parcel lockers. Please get in proximity to register device(s)."</string>
+    <string name="mpl_locker_details_title">"Locker details"</string>
+    <string name="main_locker_battery">"Battery:"</string>
+    <string name="main_locker_fw">"Nina firmware version:"</string>
+    <string name="main_locker_stm_ver">"STM firmware version:"</string>
+    <string name="main_locker_settings">"Locker settings"</string>
+    <string name="main_locker_manage_peripherals">"Manage peripherals"</string>
+    <string name="main_locker_manage_users">"Manage users"</string>
+    <string name="main_locker_manage_network">"Manage network"</string>
+    <string name="main_locker_registration_started">"Registration successfully started!"</string>
+    <string name="main_locker_registration_error">"Error in registration!"</string>
+    <string name="main_locker_epaper_update_started">"E-paper update started"</string>
+    <string name="main_locker_epaper_update_error">"E-paper update error"</string>
+    <string name="main_locker_ble_connection_error">"Error while connecting the device"</string>
+    <string name="main_locker_apn_list">"Available networks"</string>
+    <string name="app_common_internet_connection">"Please check your internet connection!"</string>
+    <string name="manage_mpl_access_remove_access">"Do you want to reject user request on MPL?"</string>
+    <string name="manage_mpl_access_remove_rights">"Do you want to remove user rights on MPL?"</string>
+    <string name="main_locker_epaper_update">"E-paper update"</string>
+    <string name="nav_settings_language">"Languages"</string>
+    <string name="manage_peripherals_inproximity">"In proximity"</string>
+    <string name="manage_peripherals_not_inproximity">"Not in proximity"</string>
+    <string name="intro_register_show_password">"Show password"</string>
+    <string name="nav_home_mpl_title">"Multi"</string>
+    <string name="nav_home_spl_title">"Single"</string>
+    <string name="nav_alarms_title">"Alarms"</string>
+    <string name="nav_settings_title">"Settings"</string>
+    <string name="nav_settings_user_details">"User details"</string>
+    <string name="nav_settings_change_password">"Change password"</string>
+    <string name="login_submit_title">"Sign in"</string>
+    <string name="register_submit_title">"Register"</string>
+    <string name="register_in_progress">"Register in progress..."</string>
+    <string name="forgot_password_title">"Forgot Your Password?"</string>
+    <string name="forgot_password_description_title">"Please enter your email address"</string>
+    <string name="forgot_password_send">"Send"</string>
+    <string name="key_sharing_delete_key_message">"Are you sure you want to remove locker from master device?"</string>
+    <string name="pending">"Pending"</string>
+    <string name="reset_password_title">"Reset Your Password"</string>
+    <string name="reset_password_description_title">"Please enter your new password"</string>
+    <string name="reset_password_pin">"Recovery pin"</string>
+    <string name="delete_pending">"Delete pending"</string>
+    <string name="registration_pending">"Registration pending"</string>
+    <string name="manage_peripherals_registered">"Registered"</string>
+    <string name="manage_peripherals_unregistered">"Unregistered"</string>
+    <string name="main_gsm_status">"Modem status:"</string>
+    <string name="main_gsm_rssi">"Modem RSSI:"</string>
+    <string name="main_gsm_modem_queue">"Modem queue:"</string>
+    <string name="main_number_of_lockers">"Number Of Lockers:"</string>
+    <string name="manage_peripherals_title">"Peripheral %s"</string>
+    <string name="nav_settings_app_version">"App version: %s"</string>
+    <string name="locker_settings_error_name_empty_warning">"Please enter the name!"</string>
+    <string name="locker_settings_error_address_empty_warning">"Please enter the address!"</string>
+    <string name="edit_user_notification_setting_push_and_email">"Push and E-Mail notification"</string>
+    <string name="peripheral_settings_force_open">"Force Open"</string>
+    <string name="peripheral_settings_discover_peripheral">"Discover"</string>
+    <string name="default_notification_channel_id">"fcm_default_channel"</string>
+    <string name="default_notification_channel_name">"News"</string>
+    <string name="locker_settings_save_changes">"Save changes"</string>
+    <string name="edit_user_validation_blank_fields_exist">"Please enter all user information."</string>
+    <string name="edit_user_validation_current_password_invalid">"Current password not correct!"</string>
+    <string name="edit_user_validation_current_user_invalid">"Current user is not valid!"</string>
+    <string name="edit_user_validation_passwords_do_not_match">"Password is incorrect"</string>
+    <string name="edit_user_validation_password_min_6_characters">"Password must be at least 6 characters long"</string>
+    <string name="edit_user_validation_username_min_4_characters">"Username must be at least 4 characters long"</string>
+    <string name="edit_user_validation_terms_and_conditions_not_checked">"Please accept General Terms and Conditions and Privacy Statement"</string>
+    <string name="message_email_invalid">"Email address not valid!"</string>
+    <string name="app_generic_name">"Name"</string>
+    <string name="app_generic_address">"Address"</string>
+    <string name="app_generic_email">"E-mail"</string>
+    <string name="app_generic_submit">"Submit"</string>
+    <string name="app_generic_clear_all">"Clear all"</string>
+    <string name="app_generic_no_ble">"Please turn bluetooth on."</string>
+    <string name="app_generic_confirm">"Confirm"</string>
+    <string name="app_generic_cancel">"Cancel"</string>
+    <string name="app_generic_sign_in">"Sign in"</string>
+    <string name="app_generic_password">"Password"</string>
+    <string name="app_generic_username">"Username"</string>
+    <string name="app_generic_no_network">"No Internet connection."</string>
+    <string name="app_generic_size">"Size: %s"</string>
+    <string name="app_generic_repeat_password">"Repeat password"</string>
+    <string name="successfully_saved_data">"Successfully saved data!"</string>
+    <string name="select_mpl_size">"Please select size of MPL locker to register"</string>
+    <string name="registration_error">"Error in registration!"</string>
+    <string name="successfull_saved_network_configuration">"Network configuration setup successfully!"</string>
+    <string name="successfully_updated">"Successfully updated"</string>
+    <string name="error_updating_mpl">"Error while updating MPL device"</string>
+    <string name="app_generic_home">"Home"</string>
+    <string name="app_generic_alerts">"Alerts"</string>
+    <string name="app_generic_settings">"Settings"</string>
+
+    <!-- Force open error -->
+    <string name="main_locker_force_open_update_error">"Force open error"</string>
+    <string name="assing_mpl_section">"Assign MPL section."</string>
+    <string name="group_manage_users">"Group:"</string>
+    <string name="mpl_or_spl_unregistered">"UNREGISTERED"</string>
+    <string name="app_generic_not_activated">"Not activated"</string>
+    <string name="pin_management_title">"PIN management"</string>
+    <string name="pin_management_description">"Enable pin saving"</string>
+    <string name="app_generic_server_error">"Error while connecting to server. Please check your internet connection."</string>
+
+    <!-- Power saving mode -->
+    <string name="locker_settings_power_saving_title">"Power saving mode"</string>
+    <string name="locker_settings_power_saving_cb_text">"Enable battery saving mode (slower performances)"</string>
+
+    <!-- Fuzzy -->
+    <string name="peripheral_key_purpose">"Key purpose"</string>
+    <string name="peripheral_key_delivery">"Delivery"</string>
+    <string name="peripheral_key_created_for">"Created for"</string>
+    <string name="peripheral_key_pick_home">"pick@home"</string>
+    <string name="peripheral_key_created_by">"Created by"</string>
+    <string name="tablet_refresh_user_list">"Refresh user list"</string>
+    <string name="main_locker_user_refresh_list_update_started">"User refresh list started"</string>
+    <string name="main_locker_user_refresh_list_update_error">"User refresh list error"</string>
+    <string name="locker_occupied">"occupied"</string>
+    <string name="locker_empty">"empty"</string>
+    <string name="app_generic_warning">"Warning"</string>
+    <string name="locker_settings_power_unchecking_checkbox_message">"Please ensure the device has external power. Otherwise, these batteries will discharge within 1 month."</string>
+    <string name="main_locker_tablet_app_ver">"Application version:"</string>
+    <string name="main_locker_mac">"MAC address:"</string>
+    <string name="main_not_in_range">"Device is not in proximity"</string>
+    <string name="main_locker_rat">"RAT:"</string>
+    <string name="main_last_update">"Last updated:"</string>
+    <string name="main_locker_reboot">"Reboot"</string>
+    <string name="main_number_of_available_lockers_size_xs">"XS:"</string>
+    <string name="main_number_of_available_lockers_size_s">"S:"</string>
+    <string name="main_number_of_available_lockers_size_m">"M:"</string>
+    <string name="main_number_of_available_lockers_size_l">"L:"</string>
+    <string name="main_number_of_available_lockers_size_xl">"XL:"</string>
+    <string name="app_generic_notifications">"Notifications"</string>
+    <string name="app_generic_error">"Error"</string>
+    <string name="settings_alert_langugage_changed">"App was reloaded to change the language"</string>
+    <string name="settings_update_success">"All changes are saved"</string>
+    <string name="app_generic_password_doesnt_match">"Passwords don't match"</string>
+    <string name="edit_user_notification_setting_email">"Email"</string>
+    <string name="nav_settings_type_new_password">"Type new password"</string>
+    <string name="nav_settings_retype_new_password">"Retype new password"</string>
+    <string name="app_generic_enter_ble">"Not in proximity"</string>
+    <string name="spl_plus_title">"SPL PLUS"</string>
+
+    <!-- Fuzzy -->
+    <string name="spl_plus_keypad_type">"Choose your keyboard layout"</string>
+    <string name="spl_plus_manage_keyboard">"Manage locker type
+"</string>
+    <string name="spl_plus_single_keyboard_multiple_selection">"Please select only one peripheral."</string>
+    <string name="spl_plus_single_keyboard_wrong_selection">"Please select L size of peripheral."</string>
+    <string name="p16_remove_all">"REMOVE ALL"</string>
+    <string name="p16_remove_description">"Are you sure you want to remove P16 peripheral from master device?"</string>
+    <string name="edit_validation_blank_fields_exist">"Please enter all user information."</string>
+    <string name="device_latitude">"Latitude"</string>
+    <string name="device_longitude">"Longitude"</string>
+    <string name="select_locker_location_title">"Select locker location"</string>
+    <string name="spl_locker_occupied">"Locker is already occupied."</string>
+    <string name="manage_peripherals_select_size">"Select size"</string>
+    <string name="manage_users_no_users">"Currently there are no users on this device."</string>
+    <string name="app_generic_success">"Success"</string>
+    <string name="mpl_epaper_type">"Choose your epaper type"</string>
+    <string name="main_locker_factory_reset">"Factory reset"</string>
+    <string name="error_locker_reboot">"Error occurred while device rebooting"</string>
+    <string name="error_factory_reset">"Error occurred while factory reset device"</string>
+
+    <!-- Fuzzy -->
+    <string name="delete_all_keys_title">"Delete all keys"</string>
+
+    <!-- Fuzzy -->
+    <string name="delete_key">"You cannot undo this action. This device still has %s active key. Are you sure you want to delete this key?"</string>
+    <string name="delete_all_keys">"You cannot undo this action. This device still has %s active keys. Are you sure you want to delete all the keys?"</string>
+    <string name="delete_key_not_in_proximity">"Your action can’t be undone. This key will be deleted when locker synchronizes the state!"</string>
+    <string name="delete_key_in_proximity">"Your action can’t be undone. This active key will be permanently deleted and all users will not able to access their deliveries after that action."</string>
+    <string name="key_purpose">"Key purpose:"</string>
+    <string name="key_created_for">"Created for:"</string>
+    <string name="deleting_key_in_progress">"Request for deleting key in progress."</string>
+    <string name="locker_action_discover">"Turn on the locker’s LED for couple of seconds so it is easier to locate the current locker."</string>
+    <string name="locker_action_force_open">"Open the peripheral door even if the locker is occupied. Use only in exceptional situations."</string>
+    <string name="locker_action_delete_key_in_proximity">"Permanently invalidate a delivery or pick at home key for this peripheral."</string>
+    <string name="locker_action_delete_key_not_in_proximity">"This key will be deleted when locker synchronizes the state."</string>
+    <string name="locker_action_delete_locker">"Unregister current locker. All active keys will be invalidated. "</string>
+    <string name="invalidate_key">"Invalidate key"</string>
+    <string name="delete_locker">"REMOVE LOCKER"</string>
+    <string name="e_paper_type">"E-paper type:"</string>
+    <string name="e_paper_none">"none"</string>
+
+    <!-- The shortcut of low resolution -->
+    <string name="e_paper_low_resolution">"low-res"</string>
+    <string name="e_paper_high_resolution">"hi-res"</string>
+    <string name="system_reset">"SYSTEM RESET"</string>
+    <string name="system_reset_description">"Are you sure you want to do system reset?"</string>
+    <string name="edit_user_validation_group_name_min_4_characters">"Group name must be at least 4 characters long."</string>
+    <string name="delete_user_from_system">"Are you sure you want to delete user from system?"</string>
+    <string name="app_generic_group">"Group name"</string>
+
+    <!-- Fuzzy -->
+    <string name="group_name_description">"Group name fields will be shown as first and second row of the description on the e-paper display."</string>
+    <string name="e_paper_preview">"E-paper preview"</string>
+    <string name="user_status">"User status:"</string>
+    <string name="user_status_active">"Active"</string>
+    <string name="user_status_inactive">"Inactive"</string>
+
+    <!-- Fuzzy -->
+    <string name="no_epaper_update_available">"There is currently no epaper type selected. You can change that in locker settings. After that you can do epaper update."</string>
+    <string name="no_epaper_preview_available">"There is currently no epaper type selected. You can change that in locker settings. After that you can do epaper preview."</string>
+    <string name="nothing_selected">"You did not select anything."</string>
+    <string name="update_locker_data_started">"Update locker data started."</string>
+    <string name="app_name_flexi">"Flexilocker Admin"</string>
+    <string name="app_name_zwick">"ZWICKbox Admin"</string>
+    <string name="app_name_huber">"Schlauebox Admin"</string>
+    <string name="delete_device_are_you_sure">"Are you sure you want to delete this device?"</string>
+    <string name="logout_question">"Are you sure you want to sign out?"</string>
+    <string name="logout_again">"You can sign in again at any time."</string>
+    <string name="delete_device">"Delete device"</string>
+    <string name="registration_password">"Password*"</string>
+    <string name="registration_repeat_password">"Repeat password*"</string>
+    <string name="password_dont_match">"Password doesn't match"</string>
+    <string name="app_generic_phone">"Phone"</string>
+    <string name="spl_plus_keyboard_success">"Keyboard successfully updated."</string>
+
+    <!-- Fuzzy -->
+    <string name="moderator_device_registration_access_error">"You can not register the device because you do not have an administrator role."</string>
+    <string name="wrong_username_or_password">"Wrong username/password."</string>
+
+    <!-- Not available -->
+    <string name="manage_peripherals_not_available">"Not available"</string>
+    <string name="manage_peripherals_on_another_device">"On another device"</string>
+    <string name="wrong_inserted_text_home_screen">"No matches found. You can search devices by name, address or mac address."</string>
+    <string name="hint_search_text_home_screen">"Filter"</string>
+    <string name="delete_all_alerts_messages">"Are you sure you want to delete all messages?"</string>
+    <string name="delete_single_alerts_messages">"Are you sure you want to this message?"</string>
+    <string name="manage_peripherals_p16_title">"Locker- %s, %s"</string>
+    <string name="unsaved_changes_continue">"You have some unsaved changes. Do you wish anyway to continue?"</string>
+    <string name="stop_alerts_message">"Are you sure you want to stop receiving alerts for this device?"</string>
+    <string name="send_alerts">"Send alerts"</string>
+    <string name="reduced_mobility_friendly">"Reduced mobility friendly"</string>
+    <string name="device_registered_on_backend_deleted_eprom">"Device is registered on backend, but eprom is deleted."</string>
+    <string name="bar_code_scanning">"Barcode scanning"</string>
+    <string name="enable_bar_code_scanning">"Enable Parcel Barcode Scanning"</string>
+    <string name="external_bar_code_scanning">"Use External Barcode Scanner"</string>
+    <string name="moderator_registration_device">"As moderator you can not register device."</string>
+    <string name="app_name_retail">"Retailer Admin"</string>
+
+    <!-- Fuzzy -->
+    <string name="app_name_baselcpl">"SmartBoxBasel Admin"</string>
+    <string name="app_name_flexilockercpl">"FlexiLockerCPL Admin"</string>
+    <string name="wrong_inserted_text_manage_user">"Nothing matches this inserted text. You can search users by name, email and group."</string>
+    <string name="reset_password_match_error">"Entered passwords do not match"</string>
+    <string name="no_location_services">"No location services"</string>
+    <string name="current_password">"Type current password"</string>
+    <string name="enable_courier_identification">"Enable courier identification"</string>
+    <string name="camera_barcode_scanner">"Camera"</string>
+    <string name="external_barcode_scanner">"External scanner"</string>
+    <string name="not_possible_delete_keys_spl_plus_title">"Not possible to delete keys"</string>
+    <string name="not_possible_delete_keys_spl_plus_description">"Delete keys can not be done in all spl plus devices that have smaller firmware version than 2.1.0"</string>
+    <string name="registering_locker_on_master">"Registering this peripheral to this device is not compatible."</string>
+    <string name="current_locker_version">"Current peripheral version: %s"</string>
+    <string name="current_master_version">"Current device version: %s"</string>
+    <string name="already_granted_access">"This user has already access to this device."</string>
+    <string name="wrong_master_version_delete_device_spl_plus">"This option is available for devices with STM =&gt; 2.1.1"</string>
+    <string name="wrong_master_version_delete_device_mpl">"This option is available for devices with STM =&gt; 2.1.0"</string>
+    <string name="removing_locker_not_possible_status_occupied">"Removing locker not possible while in status occcupied."</string>
+    <string name="registered_devices_per_account">"Registered devices:"</string>
+    <string name="app_generic_ok">"OK"</string>
+    <string name="locker_cleaning_needed">"This locker was marked as dirty. Please make sure the locker has been cleaned before you mark it as clean."</string>
+    <string name="mark_as_clean">"Mark as clean"</string>
+    <string name="lockers_needs_cleaning">"Locker needs cleaning"</string>
+    <string name="successfully_started_to_delete_keys">"Successfully started to delete keys."</string>
+    <string name="failed_to_delete_all_keys">"Failed to delete all keys."</string>
+    <string name="delete_expired_keys">"Pickup expired deliveries"</string>
+    <string name="all_keys_not_expired">"All keys are not expired."</string>
+
+    <!-- Fuzzy -->
+    <string name="door_bell_title">"Door bell"</string>
+    <string name="door_bell_value">"Enable door bell"</string>
+    <string name="do_you_need_help">"Do you need help?"</string>
+    <string name="open_user_manual">"Open user manual"</string>
+
+    <!-- Fuzzy -->
+    <string name="courier_identification_required">"Courier identification required"</string>
+
+    <!-- Fuzzy -->
+    <string name="barcode_scanner_enabled">"Barcode scanner enabled"</string>
+    <string name="successfully_started_to_clean_all_lockers">"Successfully started to mark all lockers as clean."</string>
+    <string name="not_all_lockers_marked_as_clean">"Not all lockers marked as clean. Please try again."</string>
+
+    <!-- Fuzzy -->
+    <string name="clean_all_dirty_lockers">"Clean all dirty lockers"</string>
+
+    <!-- Fuzzy -->
+    <string name="moderator_no_access_right">"As a moderator, you don't have access right to this function."</string>
+    <string name="locker_doors_are_opened">"Locker doors are opened!"</string>
+    <string name="locker_slave_type">"Type:"</string>
+    <string name="locker_slave_id">"Locker id:"</string>
+    <string name="app_generic_status">"Status:"</string>
+    <string name="locker_slave_key">"Key:"</string>
+
+    <!-- Fuzzy -->
+    <string name="locker_slave_key_from">"From:"</string>
+
+    <!-- Fuzzy -->
+    <string name="locker_slave_key_for">"For:"</string>
+    <string name="locker_slave_key_created">"Created:"</string>
+    <string name="locker_slave_size">"Size:"</string>
+    <string name="locker_slave_edit">"Edit"</string>
+    <string name="locker_slave_unlocked">"unlocked"</string>
+    <string name="locker_door_open_fail_linux">"Locker door open fail"</string>
+    <string name="no_active_key_linux">"No active key"</string>
+    <string name="unhandled_exception_linux">"Unhandled exception"</string>
+    <string name="pick_at_home_enabled_linux">"Pick at home enabled"</string>
+    <string name="user_identification_enabled_linux">"User identification enabled"</string>
+    <string name="linux_locker_settings">"Linux settings"</string>
+    <string name="delete_all_expired_keys_linux">"Are you sure you want to delete all expired keys?"</string>
+    <string name="state_generic">"State:"</string>
+    <string name="other_generic">"Other:"</string>
+    <string name="not_in_proximity_of_locker">"You are not in proximity of locker."</string>
+
+    <string name="are_you_sure_force_open">"Are you sure you want to do force open?"</string>
+    <string name="are_you_sure_delete_key">"Are you sure you want to delete this key?"</string>
+
+    <string name="generic_search">"Search"</string>
+
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSplPLusPeripherals"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:paddingTop="10dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.88"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/clBottomLayout"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvSplPLusPeripherals" >
+
+
+        <ProgressBar
+            android:id="@+id/progressBarButtonClick"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:indeterminateDrawable="?attr/thmSplashProgressBar"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+            android:id="@+id/btnSaveChanges"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="?attr/thmButtonTextSize"
+            android:letterSpacing="?attr/thmButtonLetterSpacing"
+            android:text="@string/locker_settings_save_changes"
+            android:textColor="?attr/thmLoginButtonTextColor"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeMedium"
+            android:background="?attr/thmMainButtonBackgroundColor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

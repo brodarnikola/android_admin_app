@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <!--
+        android:background="?attr/thmSettingsLanguageBackgroundColor"-->
+
+    <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+        android:id="@+id/tvErrorResponse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:letterSpacing="?attr/thmEdittextTextLetterSpacing"
+        android:textSize="?attr/thmEdittextTextSize"
+        android:paddingLeft="?attr/thmSettingsLanguageTextPaddingLeft"
+        android:paddingBottom="?attr/thmSettingsLanguageTextPaddingBottom"
+        android:paddingTop="?attr/thmSettingsLanguageTextPaddingTop"
+        android:maxLines="2"
+        android:ellipsize="end"
+
+        android:gravity="left|center_vertical"
+        android:text=""
+        android:textColor="?attr/thmDescriptionTextColor"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeRegular"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+        android:id="@+id/tvLockerMac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:letterSpacing="?attr/thmEdittextTextLetterSpacing"
+        android:textSize="?attr/thmEdittextTextSize"
+        android:paddingLeft="?attr/thmSettingsLanguageTextPaddingLeft"
+        android:paddingBottom="?attr/thmSettingsLanguageTextPaddingBottom"
+        android:paddingTop="?attr/thmSettingsLanguageTextPaddingTop"
+
+        android:gravity="left|center_vertical"
+        android:text=""
+        android:textColor="?attr/thmSettingsLanguageTextColor"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeRegular"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvErrorResponse"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

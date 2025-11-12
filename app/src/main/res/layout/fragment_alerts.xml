@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:background="?attr/thmAlertsMessagesBackgroundColor"
+    android:paddingBottom="10dp">
+
+    <!--<hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+        android:id="@+id/tvLockerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingBottom="2dp"
+        android:text="@string/nav_alarms_title"
+        android:textAllCaps="true"
+        android:textColor="?attr/thmTitleTextColor"
+        android:textSize="?attr/thmSettingsSubTitleTextSize"
+        android:letterSpacing="?attr/thmSettingsSubTitleLetterSpacing"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeMedium"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clClearAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="20dp"
+        android:background="?attr/thmMainButtonBackgroundColor">
+
+        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+            android:id="@+id/ivClearNotifications"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:textAllCaps="true"
+            android:gravity="center"
+
+            android:paddingBottom="3dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="3dp"
+            android:paddingRight="5dp"
+
+            android:letterSpacing="?attr/thmButtonLetterSpacing"
+            android:text="@string/app_generic_clear_all"
+            android:textColor="?attr/thmLoginButtonTextColor"
+            android:textSize="?attr/thmButtonTextSize"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeMedium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/alertRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clClearAll" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:indeterminateDrawable="?attr/thmSplashProgressBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

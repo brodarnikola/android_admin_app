@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="?attr/thmSlaveDialogBackgroundColor"
+    android:padding="16dp">
+
+    <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/manage_peripherals_select_size"
+        android:textColor="?attr/thmTitleTextColor"
+        android:textSize="22sp"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeBold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clFirstLockerSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp">
+
+
+       <ImageView
+            android:id="@+id/sizeXs"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/btn_size_xs_unselected"
+
+            app:layout_constraintEnd_toStartOf="@+id/sizeS"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+        <ImageView
+            android:id="@+id/sizeS"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/btn_size_s_unselected"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sizeXs"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintEnd_toStartOf="@+id/sizeM"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+        <ImageView
+            android:id="@+id/sizeM"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/btn_size_m_unselected"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toEndOf="@+id/sizeS"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSecondLockerSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clFirstLockerSize"
+        android:layout_marginTop="10dp">
+
+
+        <ImageView
+            android:id="@+id/sizeL"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/btn_size_l_unselected"
+
+            app:layout_constraintEnd_toStartOf="@+id/sizeXL"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/sizeXL"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/btn_size_xl_unselected"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sizeL"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/llReducedMobility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/clSecondLockerSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:visibility="gone"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <hr.sil.android.smartlockers.adminapp.fonts.CheckBoxWithFont
+            android:id="@+id/reducedMobilityCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="?attr/thmRadioButtonAndCheckBoxTextSize"
+            android:text="@string/reduced_mobility_friendly"
+            android:textColor="?attr/thmTitleTextColor"
+            android:theme="@style/CheckBoxThemeDark"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeRegular"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/distincerDiscover"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+    <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+        android:id="@+id/btnConfirm"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="?attr/thmButtonTextSizeInsideDialog"
+        android:text="@string/app_generic_confirm"
+        android:textColor="?attr/thmLoginButtonTextColor"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeMedium"
+        android:background="?attr/thmMainButtonBackgroundColor"
+        app:layout_constraintTop_toBottomOf="@+id/llReducedMobility"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+        android:id="@+id/btnCancel"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="?attr/thmButtonTextSizeInsideDialog"
+        android:text="@string/app_generic_cancel"
+        android:textColor="?attr/thmLoginButtonTextColor"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeMedium"
+        android:background="?attr/thmMainButtonBackgroundColor"
+        app:layout_constraintTop_toBottomOf="@+id/btnConfirm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:id="@+id/viewSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnCancel" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:indeterminateDrawable="?attr/thmSplashProgressBar"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clSecondLockerSize" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

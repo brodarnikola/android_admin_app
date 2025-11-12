@@ -1,0 +1,215 @@
+{
+  "project_info": {
+    "project_number": "797901673369",
+    "firebase_url": "https://schlaueboxadmin.firebaseio.com",
+    "project_id": "schlaueboxadmin",
+    "storage_bucket": "schlaueboxadmin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797901673369:android:2aa62a7b416c789417f908",
+        "android_client_info": {
+          "package_name": "hr.sil.android.cpladmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797901673369-8cu9kfd5imv7qc1pm08rqe11r6uav8do.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC40ZnHujdAA6uB7clypM2aMTyo_qFfUMo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797901673369-8cu9kfd5imv7qc1pm08rqe11r6uav8do.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "797901673369-th7iuehr4dkpncjrk6p6fc5spfb69cs4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "hr.sil.ios.schlauebox.admin"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797901673369:android:f8da846607222dd417f908",
+        "android_client_info": {
+          "package_name": "hr.sil.android.flexilockeradminapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797901673369-5vtbd97hcfcp2sbo7duqbsv2auiqo3ap.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hr.sil.android.flexilockeradminapp",
+            "certificate_hash": "1c34c8e58cd58cbf47a226a3a9a78455053e1075"
+          }
+        },
+        {
+          "client_id": "797901673369-8cu9kfd5imv7qc1pm08rqe11r6uav8do.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC40ZnHujdAA6uB7clypM2aMTyo_qFfUMo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797901673369-8cu9kfd5imv7qc1pm08rqe11r6uav8do.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "797901673369-th7iuehr4dkpncjrk6p6fc5spfb69cs4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "hr.sil.ios.schlauebox.admin"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797901673369:android:8bdd913a9aa0e09617f908",
+        "android_client_info": {
+          "package_name": "hr.sil.android.schlauebox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797901673369-8cu9kfd5imv7qc1pm08rqe11r6uav8do.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC40ZnHujdAA6uB7clypM2aMTyo_qFfUMo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797901673369-8cu9kfd5imv7qc1pm08rqe11r6uav8do.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "797901673369-th7iuehr4dkpncjrk6p6fc5spfb69cs4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "hr.sil.ios.schlauebox.admin"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797901673369:android:2fe412eb63c2f5dd17f908",
+        "android_client_info": {
+          "package_name": "hr.sil.android.schlaueboxadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797901673369-698uakuvf2nb30cv3801rbr4mqephdd8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hr.sil.android.schlaueboxadmin",
+            "certificate_hash": "1c34c8e58cd58cbf47a226a3a9a78455053e1075"
+          }
+        },
+        {
+          "client_id": "797901673369-8cu9kfd5imv7qc1pm08rqe11r6uav8do.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC40ZnHujdAA6uB7clypM2aMTyo_qFfUMo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797901673369-8cu9kfd5imv7qc1pm08rqe11r6uav8do.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "797901673369-th7iuehr4dkpncjrk6p6fc5spfb69cs4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "hr.sil.ios.schlauebox.admin"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797901673369:android:eb66561fa9c140f917f908",
+        "android_client_info": {
+          "package_name": "hr.sil.android.zwickappboxadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797901673369-etuqqrn64qtiblpmu2g9fv1h838n2cs1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hr.sil.android.zwickappboxadmin",
+            "certificate_hash": "1c34c8e58cd58cbf47a226a3a9a78455053e1075"
+          }
+        },
+        {
+          "client_id": "797901673369-8cu9kfd5imv7qc1pm08rqe11r6uav8do.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC40ZnHujdAA6uB7clypM2aMTyo_qFfUMo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797901673369-8cu9kfd5imv7qc1pm08rqe11r6uav8do.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "797901673369-th7iuehr4dkpncjrk6p6fc5spfb69cs4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "hr.sil.ios.schlauebox.admin"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

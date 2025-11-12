@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="description_text_size">12sp</dimen>
+
+    <dimen name="home_screen_filter_image_padding_bottom">3dp</dimen>
+
+    <dimen name="action_device_details_text_size">16sp</dimen>
+
+    <dimen name="list_title_text_size">17sp</dimen>
+    <dimen name="list_subtitle_text_size">15sp</dimen>
+    <dimen name="list_description_text_size">13sp</dimen>
+
+    <dimen name="letter_spacing">0.20</dimen>
+    <dimen name="sendParcelDeliveryTextCallback">19sp</dimen>
+    <dimen name="toolbarTextSize">17.5sp</dimen>
+    <dimen name="buttonTextSize">13.5sp</dimen>
+    <dimen name="button_letter_spacing">0.07</dimen>
+    <dimen name="buttonTextSize_inside_dialog">16sp</dimen>
+
+    <dimen name="edittext_hint_letter_spacing">0.11</dimen>
+
+    <dimen name="edittext_leftpadding">0dp</dimen>
+    <dimen name="edittext_text_size">16sp</dimen>
+    <dimen name="edittext_text_letter_spacing">0.02</dimen>
+    <dimen name="edittext_margin_right">0dp</dimen>
+
+    <dimen name="radio_button_checkbox_text_size">14sp</dimen>
+
+    <dimen name="spinner_height">30dp</dimen>
+
+    <dimen name="locker_settings_delete_device_text_size">15sp</dimen>
+    <dimen name="locker_settings_google_maps_margin_top">22dp</dimen>
+    <dimen name="locker_settings_system_reboot_image_horizontal_weight">1.7</dimen>
+    <dimen name="locker_settings_system_reboot_text_horizontal_weight">8.3</dimen>
+    <dimen name="locker_settings_delete_device_image_horizontal_weight">1.7</dimen>
+    <dimen name="locker_settings_delete_device_text_horizontal_weight">8.3</dimen>
+
+    <dimen name="settings_name_image_padding_bottom">14dp</dimen>
+
+    <dimen name="settings_language_text_padding_bottom">10dp</dimen>
+    <dimen name="settings_language_text_padding_top">0dp</dimen>
+    <dimen name="settings_language_text_padding_left">0dp</dimen>
+
+    <dimen name="subtitle_text_size">18sp</dimen>
+    <dimen name="subtitle_text_letter_spacing">0.12</dimen>
+
+    <dimen name="dialog_description_text_size">16sp</dimen>
+
+    <dimen name="p16_locker_size_text_size">21sp</dimen>
+    <dimen name="p16_locker_status_text_size">14sp</dimen>
+
+    <dimen name="locker_options_title_text_size">18sp</dimen>
+    <dimen name="locker_options_description_text_size">14sp</dimen>
+    <dimen name="locker_options_invalidate_key_text_size">11sp</dimen>
+
+</resources>

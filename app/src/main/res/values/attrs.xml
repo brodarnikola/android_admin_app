@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--FONTS-->
+    <attr name="font_name" format="enum">
+        <enum name="metropolis" value="1" />
+        <enum name="rajdhani" value="2" />
+        <enum name="montserrat" value="3" />
+        <enum name="barlow" value="4" />
+    </attr>
+    <attr name="font_type" format="enum">
+        <enum name="regular" value="1" />
+        <enum name="medium" value="2" />
+        <enum name="bold" value="3" />
+    </attr>
+
+    <declare-styleable name="TextViewWithFont">
+        <attr name="font_name" />
+        <attr name="font_type" />
+    </declare-styleable>
+
+    <declare-styleable name="ButtonWithFont">
+        <attr name="font_name" />
+        <attr name="font_type" />
+    </declare-styleable>
+
+    <declare-styleable name="CheckBoxWithFont">
+        <attr name="font_name" />
+        <attr name="font_type" />
+    </declare-styleable>
+
+    <declare-styleable name="RadioButtonWithFont">
+        <attr name="font_name" />
+        <attr name="font_type" />
+    </declare-styleable>
+
+    <declare-styleable name="EdittextWithFont">
+        <attr name="font_name" />
+        <attr name="font_type" />
+    </declare-styleable>
+
+    <declare-styleable name="BadgeNumbersDesign">
+        <attr name="font_name" />
+        <attr name="font_type" />
+        <!--<attr name="circle_fill_color" />-->
+    </declare-styleable>
+
+    <!-- left here for example, how to combine btn_font_name with btn_font_type -->
+    <declare-styleable name="EpaperTextEditor">
+        <attr name="btn_font_name" format="enum">
+            <enum name="metropolis" value="1" />
+            <enum name="rajdhani" value="2" />
+            <enum name="montserrat" value="3" />
+            <enum name="barlow" value="4" />
+        </attr>
+        <attr name="btn_font_type" format="enum">
+            <enum name="regular" value="1" />
+            <enum name="medium" value="2" />
+            <enum name="bold" value="3" />
+        </attr>
+        <attr name="btn_color" format="color" />
+    </declare-styleable>
+    <!-- left here for example, how to combine btn_font_name with btn_font_type -->
+
+
+    <!--THEMED references-->
+    <attr name="thmSplashLogo" format="reference" />
+    <attr name="thmSplashBackground" format="reference" />
+    <attr name="thmSplashProgressBar" format="reference" />
+
+    <attr name="thmErrorEdittextTheme" format="reference" />
+    <attr name="thmEdittextColor" format="reference" />
+
+    <attr name="thmEdittextInputLetterSpacing" format="reference" />
+
+    <attr name="thmEdittextLeftPadding" format="reference" />
+    <attr name="thmEdittextTextSize" format="reference" />
+    <attr name="thmEdittextTextLetterSpacing" format="reference" />
+    <attr name="thmEdittextMarginRight" format="reference" />
+
+    <attr name="thmRadioButtonAndCheckBoxTextSize" format="reference" />
+    <!--<attr subject="thmEdittextHintSize" format="reference" />
+    <attr subject="thmEdittextHintLetterSpacing" format="reference" />-->
+
+    <attr name="thmLoggedInAvailableBottomLineEditTextColor" format="reference" />
+    <attr name="thmLoggedInNotAvailableBottomLineEditTextColor" format="reference" />
+
+    <attr name="thmToolbarHeader" format="reference" />
+    <attr name="thmMainToolbarBackgroundColor" format="reference" />
+    <attr name="thmMainToolbarViewSeparatorColor" format="reference" />
+    <attr name="thmToolbarTextColor" format="reference" />
+    <attr name="thmLoginButtonTextColor" format="reference" />
+    <attr name="thmLoginEmail" format="reference" />
+    <attr name="thmLoginPassword" format="reference" />
+    <attr name="thmLoginDescriptionTextColor" format="reference" />
+    <attr name="thmToolbarTextSize" format="reference" />
+
+    <attr name="thmToolbarLogoutImage" format="reference" />
+
+    <attr name="thmTitleTextColor" format="reference" />
+    <attr name="thmDescriptionTextColor" format="reference" />
+    <attr name="thmDescriptionTextSize" format="reference" />
+    <attr name="thmErrorTextColor" format="reference" />
+
+    <attr name="thmLockerDoorOpenTextColor" format="reference" />
+
+    <attr name="thmLoggedInBottomLineEditTextColor" format="reference" />
+
+    <attr name="thmNoBleNoInternetLayoutTextColor" format="reference" />
+
+    <attr name="thmListTitleTextSize" format="reference" />
+    <attr name="thmListSubTitleTextSize" format="reference" />
+    <attr name="thmListDescriptionTextSize" format="reference" />
+    <attr name="thmDialogDescriptionTextSize" format="reference" />
+
+    <attr name="thmMainButtonBackgroundColor" format="reference" />
+
+    <attr name="thmNoBluebtooth" format="reference" />
+    <attr name="thmNoInternet" format="reference" />
+    <attr name="thmNoLocationBackgroundColor" format="reference" />
+    <attr name="thmNoLocationGPSImage" format="reference" />
+
+    <attr name="thmHomeScreenEdittextFilterHintColor" format="reference"/>
+    <attr name="thmHomeScreenEdittextSearchImage" format="reference"/>
+    <attr name="thmHomeScreenEdittextDeleteTextImage" format="reference"/>
+    <attr name="thmHomeScreenEdittextPaddingBottomImage" format="reference"/>
+
+    <attr name="thmSplRegisteredImage" format="reference"/>
+    <attr name="thmSplUnregisteredImage" format="reference"/>
+    <attr name="thmSplNotInProximityImage" format="reference"/>
+    <attr name="thmSplUnavailableImage" format="reference"/>
+
+    <attr name="thmMPLRegisteredImage" format="reference"/>
+    <attr name="thmMPLUnregisteredImage" format="reference"/>
+    <attr name="thmMPLNotInProximityImage" format="reference"/>
+    <attr name="thmMPLUnavailableImage" format="reference"/>
+
+    <attr name="thmTABLETRegisteredImage" format="reference"/>
+    <attr name="thmTABLETUnregisteredImage" format="reference"/>
+    <attr name="thmTABLETNotInProximityImage" format="reference"/>
+    <attr name="thmTABLETUnavailableImage" format="reference"/>
+
+    <attr name="thmLinuxRegisteredImage" format="reference"/>
+    <attr name="thmLinuxUnregisteredImage" format="reference"/>
+    <attr name="thmLinuxNotInProximityImage" format="reference"/>
+    <attr name="thmLinuxUnavailableImage" format="reference"/>
+
+    <attr name="thmBottomMenuBackgroundColor" format="reference"/>
+    <attr name="thmBottomMenuImageColor" format="reference"/>
+    <attr name="thmMainScreeBackgroundDrawable" format="reference"/>
+    <attr name="thmMainScreeNotificationTextColor" format="reference"/>
+    <attr name="thmMainScreeNotificationBackgroundColor" format="reference"/>
+
+    <attr name="thmAlertsMessagesBackgroundColor" format="reference"/>
+    <attr name="thmAlertsListRowBackgroundColor" format="reference"/>
+    <attr name="thmAlertsListRowSubjectTextColor" format="reference"/>
+    <attr name="thmAlertsListRowTitleTextColor" format="reference"/>
+    <attr name="thmAlertRemoveImage" format="reference"/>
+
+    <attr name="thmSettingsUserNameImage" format="reference"/>
+    <attr name="thmSettingsUserNameImagePaddingBottom" format="reference"/>
+    <attr name="thmSettingsLanguageBackgroundColor" format="reference"/>
+    <attr name="thmSettingsLanguageTextColor" format="reference"/>
+    <attr name="thmSettingsLanguageTextPaddingBottom" format="reference"/>
+    <attr name="thmSettingsLanguageTextPaddingTop" format="reference"/>
+    <attr name="thmSettingsLanguageTextPaddingLeft" format="reference"/>
+    <attr name="thmSettingsLogout" format="reference"/>
+    <attr name="thmSettingsSubTitleTextSize" format="reference"/>
+    <attr name="thmSettingsSubTitleLetterSpacing" format="reference"/>
+
+    <attr name="thmNeutralValue" format="reference"/>
+    <attr name="thmVeryGoodValue" format="reference"/>
+    <attr name="thmGoodValue" format="reference"/>
+    <attr name="thmBadValue" format="reference"/>
+    <attr name="thmVeryBadValue" format="reference"/>
+
+    <attr name="thmRegisterViewSeparatorBackgroundColor" format="reference"/>
+    <attr name="thmRegisterEdittextBottomLineColor" format="reference"/>
+    <attr name="thmRegisterEdittextColor" format="reference"/>
+    <attr name="thmRegisterEditHintColor" format="reference"/>
+
+    <attr name="thmDialogBackgroundColor" format="reference"/>
+    <attr name="thmDialogTextColor" format="reference"/>
+    <attr name="thmButtonTextSize" format="reference" />
+    <attr name="thmButtonLetterSpacing" format="reference" />
+    <attr name="thmButtonTextSizeInsideDialog" format="reference" />
+
+    <attr name="thmDevice1BackgroundColor" format="reference"/>
+    <attr name="thmDevice2BackgroundColor" format="reference"/>
+    <attr name="thmDevice3BackgroundColor" format="reference"/>
+    <attr name="thmDevice4BackgroundColor" format="reference"/>
+    <attr name="thmDevice5BackgroundColor" format="reference"/>
+    <attr name="thmDevice6BackgroundColor" format="reference"/>
+
+    <attr name="thmDeviceEraseImage" format="reference"/>
+    <attr name="thmDeviceDeleteKeysImage" format="reference"/>
+    <attr name="thmDeviceForceOpenImage" format="reference"/>
+    <attr name="thmDeviceLockerSettingsImage" format="reference"/>
+    <attr name="thmDeviceManagePeripheralsImage" format="reference"/>
+    <attr name="thmDeviceKeypadLayoutImage" format="reference"/>
+    <attr name="thmDeviceManageUsersImage" format="reference"/>
+    <attr name="thmDeviceEpaperUpdateImage" format="reference"/>
+    <attr name="thmDeviceManageNetworkImage" format="reference"/>
+    <attr name="thmSendAlertsImage" format="reference"/>
+    <attr name="thmDeviceSwitchTheme" format="reference"/>
+    <attr name="thmDeviceTextSize" format="reference"/>
+
+    <attr name="thmOpenGoogleMapsPicture" format="reference"/>
+
+    <attr name="thmLockerSettingsNameImage" format="reference"/>
+    <attr name="thmLockerSettingsAddressImage" format="reference"/>
+    <attr name="thmLockerSettingsDialogTextColor" format="reference"/>
+    <attr name="thmLockerSettingsOkButtonTextColor" format="reference"/>
+    <attr name="thmLockerSettingsDialogSeparatorColor" format="reference"/>
+    <attr name="thmLockerSettingsSystemRebootImage" format="reference"/>
+    <attr name="thmLockerSettingsSystemRebootImageHorizontalWeight" format="reference"/>
+    <attr name="thmLockerSettingsSystemRebootTextHorizontalWeight" format="reference"/>
+    <attr name="thmLockerSettingsDeleteDeviceImage" format="reference"/>
+    <attr name="thmLockerSettingsDeleteDeviceImageHorizontalWeight" format="reference"/>
+    <attr name="thmLockerSettingsDeleteDeviceTextHorizontalWeight" format="reference"/>
+    <attr name="thmLockerSettingsDeleteDeviceBC" format="reference"/>
+    <attr name="thmLockerSettingsDeleteDeviceTextSize" format="reference"/>
+    <attr name="thmLockerSettingsDeleteDeviceTextColor" format="reference"/>
+    <attr name="thmLockerSettingsGoogleMapsImageMarginTop" format="reference"/>
+
+    <attr name="thmKeyboardLayoutTextColor" format="reference"/>
+
+    <attr name="thmSlaveLockerBackgroundColor" format="reference"/>
+    <attr name="thmSlaveNormalImageUnregistered" format="reference"/>
+    <attr name="thmSlaveP16ImageUnregistered" format="reference"/>
+    <attr name="thmSlaveNormalImageRegistered" format="reference"/>
+    <attr name="thmSlaveP16ImageRegistered" format="reference"/>
+    <attr name="thmSlaveAddImage" format="reference"/>
+    <attr name="thmSlaveNormalDeleteImage" format="reference"/>
+    <attr name="thmSlaveP16EditImage" format="reference"/>
+    <attr name="thmSlaveNormalEditImage" format="reference"/>
+
+    <attr name="thmSlaveLockerBackgroundColorLinux" format="reference"/>
+    <attr name="thmSlaveLinuxEmpty" format="reference"/>
+    <attr name="thmSlaveLinuxOccupied" format="reference"/>
+    <attr name="slaveLinuxDoorOpened" format="reference"/>
+    <attr name="thmSlaveLinuxSearchOptionImage" format="reference"/>
+    <attr name="thmSlaveLinuxDeleteAllSearchOptionImage" format="reference"/>
+    <attr name="thmSlaveLinuxEmptyBackgroundColor" format="reference"/>
+    <attr name="thmSlaveLinuxOccupiedBackgroundColor" format="reference"/>
+    <attr name="thmSlaveLinuxReducedMobilityImage" format="reference"/>
+    <attr name="thmSlaveLinuxCleaningNeededImage" format="reference"/>
+    <attr name="thmSlaveLinuxInvalidateKeyImage" format="reference"/>
+    <attr name="thmSlaveLinuxDropdownLockerSizeBC" format="reference"/>
+
+    <attr name="thmLockerOptionDialogBC" format="reference"/>
+    <attr name="thmLockerOptionTitleTextSize" format="reference"/>
+    <attr name="thmLockerOptionDescriptionTextSize" format="reference"/>
+    <attr name="thmLockerOptionInvalidateKeyTextSize" format="reference"/>
+    <attr name="thmLockerOptionArrowBackImage" format="reference"/>
+    <attr name="thmLockerOptionDiscoverImage" format="reference"/>
+    <attr name="thmLockerOptionForceOpenImage" format="reference"/>
+    <attr name="thmLockerOptionDeleteKeyImage" format="reference"/>
+    <attr name="thmLockerOptionRemoveLockerImage" format="reference"/>
+    <attr name="thmLockerOptionButtonBC" format="reference"/>
+    <attr name="thmLockerOptionDistincerBC" format="reference"/>
+    <attr name="thmLockerOptionButtonTextColor" format="reference"/>
+
+    <attr name="thmSlaveAddButtonImage" format="reference"/>
+    <attr name="thmSlaveDeleteButtonImage" format="reference"/>
+    <attr name="thmSlaveBackgroundColor" format="reference"/>
+
+    <attr name="thmSlaveDialogBackgroundColor" format="reference"/>
+
+    <attr name="thmSlaveXSSelected" format="reference"/>
+    <attr name="thmSlaveSSelected" format="reference"/>
+    <attr name="thmSlaveMSelected" format="reference"/>
+    <attr name="thmSlaveLSelected" format="reference"/>
+    <attr name="thmSlaveXLSelected" format="reference"/>
+
+    <attr name="thmSlaveXSUnselected" format="reference"/>
+    <attr name="thmSlaveSUnselected" format="reference"/>
+    <attr name="thmSlaveMUnselected" format="reference"/>
+    <attr name="thmSlaveLUnselected" format="reference"/>
+    <attr name="thmSlaveXLUnselected" format="reference"/>
+
+    <attr name="thmP16LockerSelectedUnregistered" format="reference"/>
+    <attr name="thmP16LockerSelectedEmpty" format="reference"/>
+    <attr name="thmP16LockerSelectedNew" format="reference"/>
+    <attr name="thmP16LockerSelectedOccupied" format="reference"/>
+    <attr name="thmP16LockerNotSelectedUnregistered" format="reference"/>
+    <attr name="thmP16LockerNotSelectedEmpty" format="reference"/>
+    <attr name="thmP16LockerNotSelectedOccupied" format="reference"/>
+    <attr name="thmP16LockerDoorOpenUnregistered" format="reference"/>
+    <attr name="thmP16LockerDoorOpenEmpty" format="reference"/>
+    <attr name="thmP16LockerDoorOpenOccupied" format="reference"/>
+    <attr name="thmP16LockerSizeTextColor" format="reference"/>
+    <attr name="thmP16LockerStatusTextColor" format="reference"/>
+    <attr name="thmP16MoreOptionsLockerImage" format="reference"/>
+    <attr name="thmP16AddLockerImage" format="reference"/>
+    <attr name="thmP16RemoveLockerImage" format="reference"/>
+    <attr name="thmP16LockerForceOpenImage" format="reference"/>
+    <attr name="thmP16LockerArrowLeftImage" format="reference"/>
+    <attr name="thmP16LockerArrowRightImage" format="reference"/>
+    <attr name="thmP16RemoveDialogTextColor" format="reference"/>
+    <attr name="thmLockerOccupiedTextColor" format="reference"/>
+    <attr name="thmLockerEmptyTextColor" format="reference"/>
+    <attr name="thmLockerSelectedSizeTextColor" format="reference"/>
+    <attr name="thmLockerSelectedIndexTextColor" format="reference"/>
+    <attr name="thmLockerNotSelectedSizeTextColor" format="reference"/>
+    <attr name="thmLockerNotSelectedIndexTextColor" format="reference"/>
+    <attr name="thmP16LockerSizeTextSize" format="reference"/>
+    <attr name="thmP16LockerStatusTextSize" format="reference"/>
+
+    <attr name="thmLinuxButtonBackgroundColor" format="reference"/>
+    <attr name="thmLinuxButtonTextColor" format="reference"/>
+
+    <attr name="thmManageUserNewUser" format="reference"/>
+    <attr name="thmManageUserNotRegisteredImage" format="reference"/>
+    <attr name="thmManageUserRegisteredImage" format="reference"/>
+    <attr name="thmManageUserVendorImage" format="reference"/>
+    <attr name="thmManageUserDeleteUserImage" format="reference"/>
+    <attr name="thmManageUserGroupNameBottomLine" format="reference"/>
+    <attr name="thmManageUserGroupNameBC" format="reference"/>
+    <attr name="thmManageUserNameImage" format="reference"/>
+    <attr name="thmManageUserEPaperPreviewNotAvailable" format="reference"/>
+
+    <attr name="thmAssingUserBackgroundColor" format="reference"/>
+    <attr name="thmAssingUserTitleTextColor" format="reference"/>
+    <attr name="thmAssingUserTitleAndBottomBackgroundColor" format="reference"/>
+    <attr name="thmAssingUserCircleUnselected" format="reference"/>
+    <attr name="thmAssingUserCircleSelected" format="reference"/>
+    <attr name="thmAssingUserCircleUnavailable" format="reference"/>
+
+    <attr name="thmAssingUserRectangleUnselected" format="reference"/>
+    <attr name="thmAssingUserRectangleSelected" format="reference"/>
+
+    <attr name="thmDeviceRegisteredBackgroundColor" format="reference"/>
+
+    <attr name="thmSpinnerBackgroundColor" format="reference"/>
+    <attr name="thmSpinnerPopupBackgroundColor" format="reference"/>
+    <attr name="thmSpinnerHeightLayout" format="reference"/>
+
+    <attr name="thmSettingsArrowNext" format="reference"/>
+
+    <attr name="thmSettingsLanguage" format="reference"/>
+
+    <attr name="thmMainFontName" format="string" />
+    <attr name="thmMainFontTypeRegular" format="string" />
+    <attr name="thmMainFontTypeMedium" format="string" />
+    <attr name="thmMainFontTypeBold" format="string" />
+
+</resources>

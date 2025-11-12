@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:weightSum="1">
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.88"
+        android:paddingBottom="10dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="left"
+                android:letterSpacing="?attr/thmEdittextInputLetterSpacing"
+                android:textSize="?attr/thmDescriptionTextSize"
+                android:text="@string/app_generic_name"
+                android:textAllCaps="true"
+                android:textColor="?attr/thmDescriptionTextColor"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvName">
+
+                <hr.sil.android.smartlockers.adminapp.fonts.EdittextWithFont
+                    android:id="@+id/nameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="?attr/thmLoggedInAvailableBottomLineEditTextColor"
+                    android:inputType="text"
+                    android:letterSpacing="?attr/thmEdittextTextLetterSpacing"
+                    android:maxLines="1"
+                    android:paddingLeft="?attr/thmEdittextLeftPadding"
+                    android:paddingRight="60dp"
+
+                    android:textColor="?attr/thmRegisterEdittextColor"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="?attr/thmEdittextTextSize"
+
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeRegular"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="?attr/thmEdittextMarginRight"
+                    android:paddingBottom="?attr/thmSettingsUserNameImagePaddingBottom"
+
+                    android:src="?attr/thmLockerSettingsNameImage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvNameError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/edit_user_validation_blank_fields_exist"
+                android:textColor="?attr/thmErrorTextColor"
+                android:visibility="gone"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clName" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvAddressStreet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textAllCaps="true"
+                android:text="@string/app_generic_address"
+                android:textSize="?attr/thmDescriptionTextSize"
+                android:letterSpacing="?attr/thmEdittextInputLetterSpacing"
+                android:textColor="?attr/thmDescriptionTextColor"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintTop_toBottomOf="@+id/tvNameError"
+                app:layout_constraintLeft_toLeftOf="@+id/addressStreetEditText" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.EdittextWithFont
+                android:id="@+id/addressStreetEditText"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+
+                android:background="?attr/thmLoggedInAvailableBottomLineEditTextColor"
+                android:inputType="text"
+                android:letterSpacing="?attr/thmEdittextTextLetterSpacing"
+
+                android:maxLines="1"
+                android:paddingLeft="?attr/thmEdittextLeftPadding"
+                android:paddingRight="60dp"
+
+
+                android:singleLine="true"
+
+                android:textColor="?attr/thmRegisterEdittextColor"
+                android:textColorHint="@color/colorBlack"
+                android:textSize="?attr/thmEdittextTextSize"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddressStreet"
+                app:layout_constraintLeft_toLeftOf="parent"  />
+
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvAddressStreetError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/edit_user_validation_blank_fields_exist"
+                android:textColor="?attr/thmErrorTextColor"
+                android:visibility="gone"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintTop_toBottomOf="@+id/addressStreetEditText"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvAddressHouseNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textAllCaps="true"
+                android:text="@string/app_generic_address"
+                android:textSize="?attr/thmDescriptionTextSize"
+                android:letterSpacing="?attr/thmEdittextInputLetterSpacing"
+                android:textColor="?attr/thmDescriptionTextColor"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintTop_toBottomOf="@+id/tvNameError"
+                app:layout_constraintLeft_toLeftOf="@+id/addressHouseNumberEditText" />
+
+
+            <hr.sil.android.smartlockers.adminapp.fonts.EdittextWithFont
+                android:id="@+id/addressHouseNumberEditText"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+
+                android:background="?attr/thmLoggedInAvailableBottomLineEditTextColor"
+                android:inputType="text"
+                android:letterSpacing="?attr/thmEdittextTextLetterSpacing"
+
+                android:maxLines="1"
+                android:paddingLeft="?attr/thmEdittextLeftPadding"
+                android:paddingRight="60dp"
+
+
+                android:singleLine="true"
+
+                android:textColor="?attr/thmRegisterEdittextColor"
+                android:textColorHint="@color/colorBlack"
+                android:textSize="?attr/thmEdittextTextSize"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddressHouseNumber"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/addressStreetEditText"  />
+
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvAddressHouseNumberError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/edit_user_validation_blank_fields_exist"
+                android:visibility="gone"
+                android:textColor="?attr/thmErrorTextColor"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintTop_toBottomOf="@+id/addressHouseNumberEditText"
+                app:layout_constraintLeft_toLeftOf="@+id/addressHouseNumberEditText" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvAddressPostcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textAllCaps="true"
+                android:text="@string/app_generic_address"
+                android:textSize="?attr/thmDescriptionTextSize"
+                android:letterSpacing="?attr/thmEdittextInputLetterSpacing"
+                android:textColor="?attr/thmDescriptionTextColor"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddressHouseNumberError"
+                app:layout_constraintLeft_toLeftOf="@+id/addressPostcodeEditText" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.EdittextWithFont
+                android:id="@+id/addressPostcodeEditText"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+
+                android:background="?attr/thmLoggedInAvailableBottomLineEditTextColor"
+                android:inputType="text"
+                android:letterSpacing="?attr/thmEdittextTextLetterSpacing"
+
+                android:maxLines="1"
+                android:paddingLeft="?attr/thmEdittextLeftPadding"
+                android:paddingRight="60dp"
+
+                android:singleLine="true"
+
+                android:textColor="?attr/thmRegisterEdittextColor"
+                android:textColorHint="@color/colorBlack"
+                android:textSize="?attr/thmEdittextTextSize"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddressPostcode"
+                app:layout_constraintLeft_toLeftOf="parent"  />
+
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvAddresspostcodeError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/edit_user_validation_blank_fields_exist"
+                android:textColor="?attr/thmErrorTextColor"
+                android:visibility="gone"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintTop_toBottomOf="@+id/addressPostcodeEditText"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvAddressTown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textAllCaps="true"
+                android:text="@string/app_generic_address"
+                android:textSize="?attr/thmDescriptionTextSize"
+                android:letterSpacing="?attr/thmEdittextInputLetterSpacing"
+                android:textColor="?attr/thmDescriptionTextColor"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddressHouseNumberError"
+                app:layout_constraintLeft_toLeftOf="@+id/addressTownEditText"  />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.EdittextWithFont
+                android:id="@+id/addressTownEditText"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+
+                android:background="?attr/thmLoggedInAvailableBottomLineEditTextColor"
+                android:inputType="text"
+                android:letterSpacing="?attr/thmEdittextTextLetterSpacing"
+
+                android:maxLines="1"
+                android:paddingLeft="?attr/thmEdittextLeftPadding"
+                android:paddingRight="60dp"
+
+                android:singleLine="true"
+
+                android:textColor="?attr/thmRegisterEdittextColor"
+                android:textColorHint="@color/colorBlack"
+                android:textSize="?attr/thmEdittextTextSize"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddressTown"
+                app:layout_constraintLeft_toRightOf="@+id/addressPostcodeEditText"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvAddressTownError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/edit_user_validation_blank_fields_exist"
+                android:textColor="?attr/thmErrorTextColor"
+                android:visibility="gone"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintTop_toBottomOf="@+id/addressTownEditText"
+                app:layout_constraintLeft_toLeftOf="@+id/addressTownEditText" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvAddressCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textAllCaps="true"
+                android:text="@string/app_generic_address"
+                android:textSize="?attr/thmDescriptionTextSize"
+                android:letterSpacing="?attr/thmEdittextInputLetterSpacing"
+                android:textColor="?attr/thmDescriptionTextColor"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddressTownError"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.EdittextWithFont
+                android:id="@+id/addressCountryEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="?attr/thmLoggedInAvailableBottomLineEditTextColor"
+                android:inputType="text"
+                android:letterSpacing="?attr/thmEdittextTextLetterSpacing"
+
+                android:maxLines="1"
+                android:paddingLeft="?attr/thmEdittextLeftPadding"
+                android:paddingRight="60dp"
+
+                android:singleLine="true"
+
+                android:textColor="?attr/thmRegisterEdittextColor"
+                android:textColorHint="@color/colorBlack"
+                android:textSize="?attr/thmEdittextTextSize"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddressCountry"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvAddressCountryError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/edit_user_validation_blank_fields_exist"
+                android:textColor="?attr/thmErrorTextColor"
+                android:visibility="gone"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintTop_toBottomOf="@+id/addressCountryEditText"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <!--<androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddress">
+
+                <hr.sil.android.smartlockers.adminapp.fonts.EdittextWithFont
+                    android:id="@+id/addressEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="?attr/thmLoggedInAvailableBottomLineEditTextColor"
+                    android:inputType="text"
+                    android:letterSpacing="?attr/thmEdittextTextLetterSpacing"
+
+                    android:maxLines="1"
+                    android:paddingLeft="?attr/thmEdittextLeftPadding"
+                    android:paddingRight="60dp"
+
+                    android:singleLine="true"
+
+                    android:textColor="?attr/thmRegisterEdittextColor"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="?attr/thmEdittextTextSize"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeRegular"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="?attr/thmEdittextMarginRight"
+                    android:paddingBottom="?attr/thmSettingsUserNameImagePaddingBottom"
+
+                    android:src="?attr/thmLockerSettingsAddressImage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+            <LinearLayout
+                android:id="@+id/llLatitudeLongitude"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/transparentColor"
+                android:orientation="vertical"
+                android:paddingRight="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/llMap"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintHorizontal_weight="7.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddressCountryError">
+
+                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                    android:id="@+id/tvLatitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:alpha="0.6"
+                    android:gravity="left"
+                    android:text="@string/device_latitude"
+                    android:textColor="?attr/thmDescriptionTextColor"
+
+                    android:textAllCaps="true"
+                    android:textSize="?attr/thmDescriptionTextSize"
+                    android:letterSpacing="?attr/thmEdittextInputLetterSpacing"
+
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeRegular" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cLatitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLatitude">
+
+                    <hr.sil.android.smartlockers.adminapp.fonts.EdittextWithFont
+                        android:id="@+id/etLatitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:alpha="0.6"
+                        android:background="?attr/thmLoggedInNotAvailableBottomLineEditTextColor"
+                        android:enabled="false"
+
+                        android:inputType="text"
+                        android:letterSpacing="?attr/thmEdittextTextLetterSpacing"
+                        android:maxLines="1"
+
+                        android:paddingLeft="?attr/thmEdittextLeftPadding"
+
+                        android:paddingRight="60dp"
+                        android:singleLine="true"
+
+                        android:textColor="?attr/thmRegisterEdittextColor"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="?attr/thmEdittextTextSize"
+                        app:font_name="?attr/thmMainFontName"
+                        app:font_type="?attr/thmMainFontTypeRegular"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                    android:id="@+id/tvLatitudeError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/edit_user_validation_blank_fields_exist"
+                    android:textColor="?attr/thmErrorTextColor"
+                    android:visibility="gone"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeRegular"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cLatitude" />
+
+
+                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                    android:id="@+id/tvLongitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:alpha="0.6"
+                    android:gravity="left"
+
+                    android:textAllCaps="true"
+                    android:textSize="?attr/thmDescriptionTextSize"
+                    android:letterSpacing="?attr/thmEdittextInputLetterSpacing"
+
+                    android:text="@string/device_longitude"
+                    android:textColor="?attr/thmDescriptionTextColor"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeRegular" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cLongitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLongitude">
+
+                    <hr.sil.android.smartlockers.adminapp.fonts.EdittextWithFont
+                        android:id="@+id/etLongitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:alpha="0.6"
+                        android:background="?attr/thmLoggedInNotAvailableBottomLineEditTextColor"
+                        android:enabled="false"
+
+                        android:inputType="text"
+                        android:letterSpacing="?attr/thmEdittextTextLetterSpacing"
+                        android:maxLines="1"
+
+                        android:paddingLeft="?attr/thmEdittextLeftPadding"
+
+                        android:paddingRight="60dp"
+                        android:singleLine="true"
+
+                        android:textColor="?attr/thmRegisterEdittextColor"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="?attr/thmEdittextTextSize"
+                        app:font_name="?attr/thmMainFontName"
+                        app:font_type="?attr/thmMainFontTypeRegular"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                    android:id="@+id/tvLongitudeError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/edit_user_validation_blank_fields_exist"
+                    android:textColor="?attr/thmErrorTextColor"
+                    android:visibility="gone"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeRegular"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cLongitude" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="?attr/thmLockerSettingsGoogleMapsImageMarginTop"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="2.5"
+                app:layout_constraintStart_toEndOf="@+id/llLatitudeLongitude"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddressCountryError" >
+
+                <ImageView
+                    android:id="@+id/ivGoogleMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="?attr/thmOpenGoogleMapsPicture" />
+
+            </LinearLayout>
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvPinManagment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textSize="?attr/thmDescriptionTextSize"
+                android:text="@string/pin_management_title"
+                android:textAllCaps="true"
+                android:textColor="?attr/thmDescriptionTextColor"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llLatitudeLongitude" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.CheckBoxWithFont
+                android:id="@+id/pinSavingCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="?attr/thmRadioButtonAndCheckBoxTextSize"
+                android:text="@string/pin_management_description"
+                android:textColor="?attr/thmDescriptionTextColor"
+                android:theme="@style/CheckBoxTheme"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPinManagment" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvPowerSaving"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:textAllCaps="true"
+                android:textSize="?attr/thmDescriptionTextSize"
+                android:text="@string/locker_settings_power_saving_title"
+                android:textColor="?attr/thmDescriptionTextColor"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pinSavingCheckBox" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.CheckBoxWithFont
+                android:id="@+id/powerSavingCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:textSize="?attr/thmRadioButtonAndCheckBoxTextSize"
+                android:text="@string/locker_settings_power_saving_cb_text"
+                android:textColor="?attr/thmDescriptionTextColor"
+                android:theme="@style/CheckBoxTheme"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPowerSaving" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvDoorBell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:textSize="?attr/thmDescriptionTextSize"
+                android:text="@string/door_bell_title"
+                android:textAllCaps="true"
+                android:textColor="?attr/thmDescriptionTextColor"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/powerSavingCheckBox" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.CheckBoxWithFont
+                android:id="@+id/doorBellCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="?attr/thmRadioButtonAndCheckBoxTextSize"
+                android:text="@string/door_bell_value"
+                android:textColor="?attr/thmDescriptionTextColor"
+                android:theme="@style/CheckBoxTheme"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDoorBell" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvBarCodeScanning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:textAllCaps="true"
+                android:textSize="?attr/thmDescriptionTextSize"
+                android:text="@string/bar_code_scanning"
+                android:textColor="?attr/thmDescriptionTextColor"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doorBellCheckbox" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.CheckBoxWithFont
+                android:id="@+id/enableCourierPinIdentification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:textSize="?attr/thmRadioButtonAndCheckBoxTextSize"
+                android:text="@string/courier_identification_required"
+                android:textColor="?attr/thmDescriptionTextColor"
+                android:theme="@style/CheckBoxTheme"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBarCodeScanning" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.CheckBoxWithFont
+                android:id="@+id/enableBarCodeScanning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="?attr/thmRadioButtonAndCheckBoxTextSize"
+                android:text="@string/barcode_scanner_enabled"
+                android:textColor="?attr/thmDescriptionTextColor"
+                android:theme="@style/CheckBoxTheme"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/enableCourierPinIdentification" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                android:id="@+id/tvLinuxSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:textAllCaps="true"
+                android:textSize="?attr/thmDescriptionTextSize"
+                android:text="@string/linux_locker_settings"
+                android:textColor="?attr/thmDescriptionTextColor"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/enableBarCodeScanning" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.CheckBoxWithFont
+                android:id="@+id/userIdentification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="?attr/thmRadioButtonAndCheckBoxTextSize"
+                android:text="@string/user_identification_enabled_linux"
+                android:textColor="?attr/thmDescriptionTextColor"
+                android:theme="@style/CheckBoxTheme"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLinuxSettings" />
+
+            <hr.sil.android.smartlockers.adminapp.fonts.CheckBoxWithFont
+                android:id="@+id/pahKeysEnabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="?attr/thmRadioButtonAndCheckBoxTextSize"
+                android:text="@string/pick_at_home_enabled_linux"
+                android:textColor="?attr/thmDescriptionTextColor"
+                android:theme="@style/CheckBoxTheme"
+                app:font_name="?attr/thmMainFontName"
+                app:font_type="?attr/thmMainFontTypeRegular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userIdentification" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clEPaperType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pahKeysEnabled">
+
+                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                    android:id="@+id/tvEPaperType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:text="@string/e_paper_type"
+                    android:textAllCaps="true"
+                    android:textColor="?attr/thmDescriptionTextColor"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeRegular"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupEPaper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:maxHeight="100dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvEPaperType">
+
+                    <hr.sil.android.smartlockers.adminapp.fonts.RadioButtonWithFont
+                        android:id="@+id/noEpaper"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+
+                        android:maxLines="2"
+                        android:ellipsize="end"
+
+                        android:text="@string/e_paper_none"
+                        android:textColor="?attr/thmDescriptionTextColor"
+                        android:textSize="?attr/thmRadioButtonAndCheckBoxTextSize"
+                        app:font_name="?attr/thmMainFontName"
+                        app:font_type="?attr/thmMainFontTypeRegular" />
+
+                    <!-- before it was text size 12sp for radiobutton -->
+
+                    <hr.sil.android.smartlockers.adminapp.fonts.RadioButtonWithFont
+                        android:id="@+id/ePaperLowResolution"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:text="@string/e_paper_low_resolution"
+                        android:textColor="?attr/thmDescriptionTextColor"
+                        android:textSize="?attr/thmRadioButtonAndCheckBoxTextSize"
+                        app:font_name="?attr/thmMainFontName"
+                        app:font_type="?attr/thmMainFontTypeRegular" />
+
+                    <hr.sil.android.smartlockers.adminapp.fonts.RadioButtonWithFont
+                        android:id="@+id/ePaperHighResolution"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:text="@string/e_paper_high_resolution"
+                        android:textColor="?attr/thmDescriptionTextColor"
+                        android:textSize="?attr/thmRadioButtonAndCheckBoxTextSize"
+                        app:font_name="?attr/thmMainFontName"
+                        app:font_type="?attr/thmMainFontTypeRegular" />
+                </RadioGroup>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSystemReboot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="3dp"
+                android:background="?attr/thmLockerSettingsDeleteDeviceBC"
+
+                android:padding="10dp"
+
+                app:layout_constraintEnd_toStartOf="@+id/clDeleteDevice"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintHorizontal_weight="5.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clEPaperType">
+
+                <ImageView
+                    android:id="@+id/ivSystemReboot"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginRight="5dp"
+                    android:background="?attr/thmLockerSettingsSystemRebootImage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvNotification"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintHorizontal_weight="?attr/thmLockerSettingsSystemRebootImageHorizontalWeight"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                    android:id="@+id/tvNotification"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textAllCaps="true"
+                    android:paddingBottom="2dp"
+                    android:text="@string/system_reset"
+                    android:textColor="?attr/thmLockerSettingsDeleteDeviceTextColor"
+                    android:textSize="?attr/thmLockerSettingsDeleteDeviceTextSize"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeMedium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="?attr/thmLockerSettingsSystemRebootTextHorizontalWeight"
+                    app:layout_constraintStart_toEndOf="@+id/ivSystemReboot"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clDeleteDevice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="10dp"
+
+                android:background="?attr/thmLockerSettingsDeleteDeviceBC"
+
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintHorizontal_weight="5.0"
+                app:layout_constraintStart_toEndOf="@+id/clSystemReboot"
+                app:layout_constraintTop_toBottomOf="@+id/clEPaperType">
+
+                <ImageView
+                    android:id="@+id/ivDeleteDevice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginRight="5dp"
+                    android:background="?attr/thmLockerSettingsDeleteDeviceImage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvDeleteDevice"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintHorizontal_weight="?attr/thmLockerSettingsDeleteDeviceImageHorizontalWeight"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                    android:id="@+id/tvDeleteDevice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingBottom="2dp"
+                    android:textAllCaps="true"
+                    android:text="@string/delete_device"
+                    android:textColor="?attr/thmLockerSettingsDeleteDeviceTextColor"
+                    android:textSize="?attr/thmLockerSettingsDeleteDeviceTextSize"
+                    app:font_name="?attr/thmMainFontName"
+                    app:font_type="?attr/thmMainFontTypeMedium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="?attr/thmLockerSettingsDeleteDeviceTextHorizontalWeight"
+                    app:layout_constraintStart_toEndOf="@+id/ivDeleteDevice"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progressDeleteDevice"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12">
+
+        <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+            android:id="@+id/btnSaveChanges"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/thmMainButtonBackgroundColor"
+            android:letterSpacing="?attr/thmButtonLetterSpacing"
+            android:text="@string/locker_settings_save_changes"
+            android:textColor="?attr/thmLoginButtonTextColor"
+            android:textSize="?attr/thmButtonTextSize"
+            app:font_name="?attr/thmMainFontName"
+            app:font_type="?attr/thmMainFontTypeMedium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

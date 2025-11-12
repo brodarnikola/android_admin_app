@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <!--
+        android:background="?attr/thmSettingsLanguageBackgroundColor"-->
+
+    <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+        android:id="@+id/tvNetworkConfigName"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+
+        android:letterSpacing="?attr/thmEdittextTextLetterSpacing"
+        android:textSize="?attr/thmEdittextTextSize"
+        android:paddingLeft="?attr/thmSettingsLanguageTextPaddingLeft"
+        android:paddingBottom="?attr/thmSettingsLanguageTextPaddingBottom"
+        android:paddingTop="?attr/thmSettingsLanguageTextPaddingTop"
+
+        android:gravity="left|center_vertical"
+        android:text="@string/main_locker_fw"
+        android:textColor="?attr/thmSettingsLanguageTextColor"
+        app:font_name="?attr/thmMainFontName"
+        app:font_type="?attr/thmMainFontTypeRegular"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_nav_graph"
+    app:startDestination="@id/login_fragment">
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.LoginFragment">
+        <action
+            android:id="@+id/login_fragment_to_password_recovery_fragment"
+            app:destination="@id/password_recovery"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/password_recovery"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.PasswordRecoveryFragment">
+        <action
+            android:id="@+id/password_recovery_fragment_to_password_update_fragment"
+            app:destination="@id/password_update"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/password_update"
+        android:name="hr.sil.android.smartlockers.adminapp.view.fragment.PasswordUpdateFragment">
+        <action
+            android:id="@+id/password_update_fragment_to_login_fragment"
+            app:destination="@id/login_fragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+
+
+</navigation>
