@@ -37,7 +37,7 @@ object AppFonts {
         if (name == AppFonts.FontName.UNKNOWN) return null
         val cleanType = if (type != AppFonts.FontType.UNKNOWN) type else AppFonts.FontType.REGULAR
 
-        val path = "fonts/${name.path}-${cleanType.path}.${name.ext}"
+        val path = "font/${name.path}-${cleanType.path}.${name.ext}"
         return fontCache.getOrPut(path) { Typeface.createFromAsset(App.ref.assets, path) }
     }
 

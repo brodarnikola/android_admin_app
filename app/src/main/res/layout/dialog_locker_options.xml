@@ -113,7 +113,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="?attr/thmLockerOptionDiscoverImage" />
 
-                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                <hr.sil.android.smartlockers.adminapp.font.view.font.TextViewWithFont
                     android:id="@+id/tvDiscover"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -142,7 +142,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/clDiscover">
 
-                <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+                <hr.sil.android.smartlockers.adminapp.font.ButtonWithFont
                     android:id="@+id/btnDiscover"
                     android:layout_width="190dp"
                     android:layout_height="40dp"
@@ -216,7 +216,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="?attr/thmLockerOptionForceOpenImage" />
 
-                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                <hr.sil.android.smartlockers.adminapp.font.view.font.TextViewWithFont
                     android:id="@+id/tvForceOpen"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -246,7 +246,7 @@ the locker is occupied. Use only in exceptional situations."
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/clForceOpen">
 
-                <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+                <hr.sil.android.smartlockers.adminapp.font.ButtonWithFont
                     android:id="@+id/btnForceOpen"
                     android:layout_width="190dp"
                     android:layout_height="40dp"
@@ -320,7 +320,7 @@ the locker is occupied. Use only in exceptional situations."
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="?attr/thmLockerOptionDeleteKeyImage" />
 
-                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                <hr.sil.android.smartlockers.adminapp.font.view.font.TextViewWithFont
                     android:id="@+id/tvInvalidateKey"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -349,7 +349,7 @@ the locker is occupied. Use only in exceptional situations."
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/clInvalidateKey">
 
-                <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+                <hr.sil.android.smartlockers.adminapp.font.ButtonWithFont
                     android:id="@+id/btnInvalidateKey"
                     android:layout_width="190dp"
                     android:layout_height="40dp"
@@ -422,7 +422,7 @@ the locker is occupied. Use only in exceptional situations."
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="?attr/thmLockerOptionRemoveLockerImage" />
 
-                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                <hr.sil.android.smartlockers.adminapp.font.view.font.TextViewWithFont
                     android:id="@+id/tvRemoveLocker"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -454,7 +454,7 @@ It may take a few hours to process removal request."
                 android:layout_gravity="center"
                 android:gravity="center">
 
-                <hr.sil.android.smartlockers.adminapp.fonts.ButtonWithFont
+                <hr.sil.android.smartlockers.adminapp.font.ButtonWithFont
                     android:id="@+id/btnRemoveLocker"
                     android:layout_width="190dp"
                     android:layout_height="40dp"
@@ -507,7 +507,7 @@ It may take a few hours to process removal request."
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                <hr.sil.android.smartlockers.adminapp.font.view.font.TextViewWithFont
                     android:id="@+id/tvRemoveLocker1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -548,7 +548,7 @@ It may take a few hours to process removal request."
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="?attr/thmLockerOptionRemoveLockerImage"/>
 
-                <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+                <hr.sil.android.smartlockers.adminapp.font.view.font.TextViewWithFont
                     android:id="@+id/tvRemoveLocker1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -592,7 +592,7 @@ It may take a few hours to process removal request."
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="?attr/thmLockerOptionRemoveLockerImage"/>
 
-        <hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+        <hr.sil.android.smartlockers.adminapp.font.view.font.TextViewWithFont
             android:id="@+id/tvRemoveLocker2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

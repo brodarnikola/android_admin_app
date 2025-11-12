@@ -87,7 +87,7 @@ app:contentInsetStart="2dp" >
         style="@style/ToolBarStyle.Event"
         android:minHeight="@dimen/abc_action_bar_default_height_material">
 
-        <hr.sil.android.smartlockers.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+        <hr.sil.android.smartlockers.smartlockers.adminapp.font.view.font.TextViewWithFont
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

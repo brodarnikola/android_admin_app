@@ -7,7 +7,7 @@
     android:background="?attr/thmAlertsMessagesBackgroundColor"
     android:paddingBottom="10dp">
 
-    <!--<hr.sil.android.smartlockers.adminapp.fonts.view.fonts.TextViewWithFont
+    <!--<hr.sil.android.smartlockers.adminapp.font.view.font.TextViewWithFont
         android:id="@+id/tvLockerName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

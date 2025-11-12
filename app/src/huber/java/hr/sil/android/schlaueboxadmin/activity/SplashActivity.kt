@@ -8,6 +8,7 @@ import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import hr.sil.android.smartlockers.adminapp.R
+import hr.sil.android.smartlockers.adminapp.compose.view.ui.login.SignUpOnboardingActivity
 import hr.sil.android.smartlockers.adminapp.core.util.logger
 import hr.sil.android.smartlockers.adminapp.databinding.ActivitySplashBinding
 import hr.sil.android.smartlockers.adminapp.preferences.PreferenceStore
@@ -83,14 +84,16 @@ class SplashActivity : AppCompatActivity() {
                 if( !SettingsHelper.userRegisterOrLogin ) {
                     setupSystemLanguage()
                 }
-                LoginActivity::class.java
+                SignUpOnboardingActivity::class.java
+                //LoginActivity::class.java
             }
 
         } else {
             if( !SettingsHelper.userRegisterOrLogin ) {
                 setupSystemLanguage()
             }
-            LoginActivity::class.java
+            SignUpOnboardingActivity::class.java
+            //LoginActivity::class.java
         }
         log.info("SplashActivity", "This is second start")
 

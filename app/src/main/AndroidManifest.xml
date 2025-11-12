@@ -32,6 +32,14 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAtqao5w0ysn8Bgjbt7f_bvt1Epd_SCvjI" />
 
+
+
+        <activity
+            android:name=".compose.view.ui.login.SignUpOnboardingActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+        </activity>
+
         <activity
             android:name=".view.activity.MainActivity"
             android:launchMode="singleTop"
