@@ -4,6 +4,8 @@ import android.app.Activity
 import android.content.Intent
 import android.widget.Toast
 import androidx.compose.foundation.*
+import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -19,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.onFocusChanged
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
@@ -110,7 +113,6 @@ fun LoginScreen(
                     activity.finish()
                 }
 
-
                 is UiEvent.ShowToast -> {
                     isButtonEnabled = true
                     Toast.makeText(context, event.message, event.toastLength).show()
@@ -123,13 +125,13 @@ fun LoginScreen(
         modifier = modifier
             .fillMaxSize()
             .background(White)
+            .padding(horizontal = 30.dp)
     ) {
         val (mainContent, bottomButton) = createRefs()
 
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                //.background(Material3.colorScheme.background)
                 .constrainAs(mainContent) {
                     top.linkTo(parent.top)
                     bottom.linkTo(bottomButton.top)
@@ -139,105 +141,81 @@ fun LoginScreen(
                     height = Dimension.fillToConstraints
                 }
         ) {
-            //endregion
             Column(
                 modifier = Modifier
                     .verticalScroll(rememberScrollState()),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally
+                verticalArrangement = Arrangement.Top,
+                horizontalAlignment = Alignment.Start
             ) {
-                Row(
-                    modifier = Modifier.fillMaxWidth().background(colorResource(R.color.colorPrimary)).padding(vertical = 15.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.Center
-                ) {
-                    Text(
-                        text = stringResource(R.string.login_submit_title),
-                        fontSize = 20.sp,
-                        style = AppTypography.bodyLarge,
-                        color = colorResource(R.color.colorWhite),
-                    )
-                }
-                //endregion
-                Spacer(modifier = Modifier.height(35.dp))
-                //region EmailTextField
+                Spacer(modifier = Modifier.height(10.dp))
+
+                // Email Label
+                Text(
+                    text = stringResource(R.string.app_generic_username).uppercase(),
+                    style = AppTypography.bodyMedium,
+                    color = colorResource(R.color.colorBlack),
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                // Email TextField with Icon
                 TextField(
                     value = email,
-                    placeholder = {
-                        Text(
-                            text = stringResource(R.string.app_generic_email),
-                            color = Material3.colorScheme.onSurfaceVariant,
-                            style = passwordLabelStyle.value
-                        )
-                    },
-                    colors = TextFieldDefaults.outlinedTextFieldColors(
-                        textColor = Material3.colorScheme.onSurface,
-                        focusedBorderColor = colorResource(R.color.colorPrimary),
-                        unfocusedBorderColor = Material3.colorScheme.outline,
-                        cursorColor = colorResource(R.color.colorPrimary),
-                        backgroundColor = DarkModeTransparent
-                    ),
                     onValueChange = {
                         email = it
                         val checkErrorMessageEmail = viewModel.getEmailError(it, context)
                         errorMessageEmail =
-                            if (checkErrorMessageEmail !== "") checkErrorMessageEmail else ""
+                            if (checkErrorMessageEmail !== "") checkErrorMessageEmail else null
                     },
                     modifier = Modifier
+                        .fillMaxWidth()
                         .semantics {
                             contentDescription = "emailTextFieldLoginScreen"
-                        }
-                        .onFocusChanged {
-                            if (it.isFocused) {
-                                emailLabelStyle.value = AppTypography.bodySmall
-                            } else {
-                                emailLabelStyle.value = AppTypography.bodyLarge
-                            }
-                        }
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp),
+                        },
                     maxLines = 1,
                     singleLine = true,
                     keyboardOptions = KeyboardOptions(
                         keyboardType = KeyboardType.Email,
                         imeAction = ImeAction.Next
                     ),
+                    colors = TextFieldDefaults.textFieldColors(
+                        textColor = Material3.colorScheme.onSurface,
+                        backgroundColor = androidx.compose.ui.graphics.Color.Transparent,
+                        cursorColor = colorResource(R.color.colorPrimary),
+                        focusedIndicatorColor = colorResource(R.color.colorPrimary),
+                        unfocusedIndicatorColor = colorResource(R.color.colorDarkGray)
+                    ),
+                    textStyle = AppTypography.bodyLarge,
                     trailingIcon = {
-                        if (errorMessageEmail != null && errorMessageEmail !== "") {
-                            Icon(
-                                painter = imageInfo,
-                                contentDescription = null,
-                                tint = Material3.colorScheme.error,
-                                modifier = Modifier
-                                    .width(25.dp)
-                                    .semantics {
-                                        contentDescription = "loginExclamationMark"
-                                    }
-                            )
-                        } else if (errorMessageEmail != null && email.contains("@")) {
-                            Icon(
-                                painter = imageCheck,
-                                contentDescription = null,
-                                modifier = Modifier
-                                    .width(25.dp)
-                                    .semantics { contentDescription = "loginCheckMark" }
-                            )
-                        }
-                        else {
-                            Icon(
-                                painter = imageInfo,
-                                contentDescription = null,
-                                modifier = Modifier
-                                    .width(25.dp)
-                                    .semantics {
-                                        contentDescription = "loginExclamationMark"
-                                    }
-                            )
-                        }
+                        Icon(
+                            painter = imageInfo,
+                            contentDescription = null,
+                            modifier = Modifier.size(24.dp),
+                            tint = colorResource(R.color.colorDarkGray)
+                        )
                     }
                 )
-                //endregion
-                Spacer(modifier = Modifier.height(40.dp))
+
+                // Email Error Message
+                if (errorMessageEmail != null && errorMessageEmail!!.isNotEmpty()) {
+                    Text(
+                        text = errorMessageEmail ?: "",
+                        style = AppTypography.bodySmall,
+                        color = Material3.colorScheme.error,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                }
+
+                Spacer(modifier = Modifier.height(20.dp))
+
+                // Password Label
+                Text(
+                    text = stringResource(R.string.app_generic_password).uppercase(),
+                    style = AppTypography.bodyMedium,
+                    color = colorResource(R.color.colorBlack),
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                // Password TextField with Icon
                 TextField(
                     value = password,
                     onValueChange = {
@@ -246,19 +224,18 @@ fun LoginScreen(
                         errorMessagePassword = if (checkErrorMessage !== "") {
                             checkErrorMessage
                         } else {
-                            ""
+                            null
                         }
                     },
-                    placeholder = {
-                        Text(
-                            text = stringResource(R.string.app_generic_password),
-                            color = Material3.colorScheme.onSurfaceVariant,
-                            style = passwordLabelStyle.value
-                        )
-                    },
-                    singleLine = true,
                     visualTransformation = if (passwordVisible) VisualTransformation.None
                     else PasswordVisualTransformation(),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .semantics {
+                            contentDescription = "passwordTextFieldLoginScreen"
+                        },
+                    maxLines = 1,
+                    singleLine = true,
                     keyboardOptions = KeyboardOptions(
                         keyboardType = KeyboardType.Password,
                         imeAction = ImeAction.Done
@@ -269,69 +246,98 @@ fun LoginScreen(
                             focusManager.clearFocus()
                         }
                     ),
-                    modifier = Modifier
-                        .semantics {
-                            contentDescription = "passwordTextFieldLoginScreen"
-                        }
-                        .onFocusChanged {
-                            if (it.isFocused) {
-                                passwordLabelStyle.value = AppTypography.bodySmall
-                            } else {
-                                passwordLabelStyle.value = AppTypography.bodyLarge
-                            }
-                        }
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp),
-                    shape = RoundedCornerShape(50.dp),
-                    colors = TextFieldDefaults.outlinedTextFieldColors(
+                    colors = TextFieldDefaults.textFieldColors(
                         textColor = Material3.colorScheme.onSurface,
-                        focusedBorderColor = colorResource(R.color.colorPrimary),
-                        unfocusedBorderColor = Material3.colorScheme.outline,
+                        backgroundColor = androidx.compose.ui.graphics.Color.Transparent,
                         cursorColor = colorResource(R.color.colorPrimary),
-                        backgroundColor = colorResource(R.color.transparentColor)
+                        focusedIndicatorColor = colorResource(R.color.colorPrimary),
+                        unfocusedIndicatorColor = colorResource(R.color.colorDarkGray)
                     ),
+                    textStyle = AppTypography.bodyLarge,
                     trailingIcon = {
-                        val visibilityImage = if (passwordVisible)
-                            imageVisibilityOn else imageVisibilityOff
-                        IconButton(onClick = {
-                            passwordVisible = !passwordVisible
-                        }) {
-                            Icon(
-                                painter = visibilityImage,
-                                contentDescription = null,
-                                modifier = Modifier.width(25.dp)
-                            )
-                        }
-                    },
-                )
-                //region PasswordTextField
-                //endregion
-                Spacer(modifier = Modifier.height(34.dp))
-                //region ForgotPasswordButton
-                TextButton(
-                    modifier = Modifier
-                        .semantics {
-                            contentDescription = "forgotPasswordButtonLoginScreen"
-                        },
-                    onClick = {
-                        // viewModel.onEvent(LoginScreenEvent.OnForgottenPassword)
-                        nextScreen(SignUpOnboardingSections.LOGIN_SCREEN.route)
+                        Icon(
+                            painter = imageVisibilityOff,
+                            contentDescription = null,
+                            modifier = Modifier.size(24.dp),
+                            tint = colorResource(R.color.colorDarkGray)
+                        )
                     }
-                ) {
+                )
+
+                // Password Error Message
+                if (errorMessagePassword != null && errorMessagePassword!!.isNotEmpty()) {
                     Text(
-                        text = stringResource(R.string.forgot_password_title),
-                        color = Material3.colorScheme.onSurfaceVariant,
-                        style = passwordLabelStyle.value
+                        text = errorMessagePassword ?: "",
+                        style = AppTypography.bodySmall,
+                        color = Material3.colorScheme.error,
+                        modifier = Modifier.fillMaxWidth()
                     )
                 }
 
+                Spacer(modifier = Modifier.height(10.dp))
+
+                // Show Passwords button (centered, underlined) - Press and hold to reveal
+                Text(
+                    text = stringResource(R.string.intro_register_show_password),
+                    style = AppTypography.bodyMedium.copy(
+                        textDecoration = androidx.compose.ui.text.style.TextDecoration.Underline
+                    ),
+                    color = colorResource(R.color.colorBlack),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .pointerInput(Unit) {
+                            detectTapGestures(
+                                onPress = {
+                                    passwordVisible = true
+                                    tryAwaitRelease()
+                                    passwordVisible = false
+                                }
+                            )
+                        }
+                        .padding(vertical = 4.dp),
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                )
+
+                Spacer(modifier = Modifier.height(20.dp))
+
+                // Forgot Password button (centered, underlined)
+//                Text(
+//                    text = stringResource(R.string.forgot_password_title),
+//                    style = AppTypography.bodyMedium.copy(
+//                        textDecoration = androidx.compose.ui.text.style.TextDecoration.Underline
+//                    ),
+//                    color = colorResource(R.color.colorBlack),
+//                    modifier = Modifier
+//                        .fillMaxWidth()
+//                        .clickable(
+//                            interactionSource = remember { MutableInteractionSource() },
+//                            indication = null
+//                        ) {
+//                            viewModel.onEvent(LoginScreenEvent.OnForgotPassword)
+//                        }
+//                        .padding(vertical = 4.dp)
+//                        .semantics {
+//                            contentDescription = "forgotPasswordButtonLoginScreen"
+//                        },
+//                    textAlign = androidx.compose.ui.text.style.TextAlign.Center
+//                )
+
+                Spacer(modifier = Modifier.height(10.dp))
+
+                // Progress Bar
                 if (state.loading) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(40.dp),
-                        color = Material3.colorScheme.onSurfaceVariant,
-                        strokeWidth = 3.dp
-                    )
+                    Box(
+                        modifier = Modifier.fillMaxWidth(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(40.dp),
+                            color = colorResource(R.color.colorPrimary),
+                            strokeWidth = 3.dp
+                        )
+                    }
                 }
+
                 Spacer(modifier = Modifier.heightIn(min = 30.dp))
 
             }
@@ -340,24 +346,23 @@ fun LoginScreen(
         //region SignInButton
         NewDesignButton(
             modifier = Modifier
+                .width(210.dp)
                 .constrainAs(bottomButton) {
-                    top.linkTo(mainContent.bottom)
-                    bottom.linkTo(parent.bottom, margin = 40.dp)
-                    start.linkTo(parent.start, margin = 24.dp)
-                    end.linkTo(parent.end, margin = 24.dp)
-                    width = Dimension.fillToConstraints
-                    height = Dimension.wrapContent
+                    bottom.linkTo(parent.bottom, margin = 30.dp)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
                 }
                 .semantics {
                     contentDescription = "signInButtonLoginScreen"
                 },
-            title = stringResource(R.string.login_submit_title),
+            title = stringResource(R.string.app_generic_sign_in),
             onClick = {
                 val emailValidation = viewModel.getEmailError(email, context)
                 val passwordValidation = viewModel.getPasswordError(password, context)
 
                 if (emailValidation.isNotBlank() || passwordValidation.isNotBlank()) {
-                    errorMessageEmail = emailValidation.ifBlank { "" }
+                    errorMessageEmail = emailValidation.ifBlank { null }
+                    errorMessagePassword = passwordValidation.ifBlank { null }
                 } else {
                     isButtonEnabled = false
                     viewModel.onEvent(
